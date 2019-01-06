@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@color/white"
+                android:paddingTop="@dimen/dp_4"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/list_itease_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/avatar_container"
+                        android:layout_width="59dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true">
+
+                        <com.yl.core.widget.CircleImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_14"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_message" />
+
+                        <ImageView
+                            android:id="@+id/unread_msg_number"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/im_red_circle_bg"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_name"
+                        android:layout_marginRight="@dimen/dp_14"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/avatar_container"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_weight="1"
+                            android:id="@+id/name"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_424242"
+                            android:textSize="16sp"
+                            tools:text="Gjiazhe" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_888888"
+                            android:textSize="13sp"
+                            tools:text="9:44" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/ll_name"
+                        android:layout_toRightOf="@id/avatar_container"
+                        android:layout_marginRight="@dimen/dp_14"
+                        android:singleLine="true"
+                        android:textColor="@color/color_888888"
+                        android:textSize="14sp"
+                        tools:text="@string/im_stsnotice_item" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_4"
+                    android:background="@color/white" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/color_eee" />
+            </LinearLayout>

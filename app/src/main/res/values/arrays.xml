@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="TextFormat"
+		formatted="false">
+		<item formatted="false"><![CDATA[\n|<BR>]]></item>
+		<item formatted="false"><![CDATA[sBig|<BIG>]]></item>
+		<item formatted="false"><![CDATA[eBig|</BIG>]]></item>
+		<item formatted="false"><![CDATA[sSmall|<SMALL>]]></item>
+		<item formatted="false"><![CDATA[eSmall|</SMALL>]]></item>
+		<item formatted="false"><![CDATA[sRed|<font color=#FF4040>]]></item>
+		<item formatted="false"><![CDATA[sGray|<font color=#666666>]]></item>
+		<item formatted="false"><![CDATA[sGrey|<font color=#999999>]]></item>
+		<item formatted="false"><![CDATA[sBlack|<font color=#333333>]]></item>
+		<item formatted="false"><![CDATA[sBlue|<font color=#51A1F3>]]></item>
+		<item formatted="false"><![CDATA[sGreen|<font color=#07BC1B>]]></item>
+		<item formatted="false"><![CDATA[sVerMillion|<font color=#ee2516>]]></item>
+		<item formatted="false"><![CDATA[eFont|</font>]]></item>
+	</string-array>
+</resources>

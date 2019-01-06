@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_14"
+            android:background="@color/color_F4F4F4"
+            android:textColor="@color/color_999999"
+            android:text="@string/fi_delete_desc" />
+
+        <TextView
+            android:id="@+id/fi_delete_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_14"
+            android:background="@color/white"
+            android:textColor="@color/color_F97C6B"
+            android:textSize="@dimen/sp_16"
+            android:text="@string/fi_delete_friend" />
+        <include layout="@layout/layout_line_eee"/>
+
+        <TextView
+            android:id="@+id/fi_delete_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_14"
+            android:textSize="@dimen/sp_16"
+            android:background="@color/white"
+            android:textColor="@color/color_666666"
+            android:text="@string/fi_delete_cancel" />
+    </LinearLayout>
+</layout>

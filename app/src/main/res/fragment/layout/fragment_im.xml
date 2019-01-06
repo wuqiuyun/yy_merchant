@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="@color/colorPrimary" />
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="true"
+            app:right_icon="@drawable/im_add"
+            app:title_text="@string/oicq_msg"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_tab"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            app:tabBackground="@android:color/transparent"
+            app:tabIndicatorColor="#F46B45"
+            app:tabSelectedTextColor="#F46B45" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+    </LinearLayout>
+</layout>

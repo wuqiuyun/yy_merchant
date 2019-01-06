@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="下单成功"
+                android:textColor="@color/alpha_80_black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="07-12 16:42"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_12" />
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="您预约的服务已成功下单，等待美发师接单"
+            android:textColor="@color/alpha_80_black"
+            android:textSize="@dimen/sp_14"/>
+        
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务：洗剪吹"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_12"
+                />
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp_20"
+                android:id="@+id/tv_service_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约时间：2018-07-14 14：00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_12"
+                />
+            
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_2"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:id="@+id/tv_service_oldtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原预约时间：2018-07-14 14：00"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_order_no"
+            android:padding="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单编号：2018052212345678"
+            android:textColor="@color/alpha_80_black"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+</layout>

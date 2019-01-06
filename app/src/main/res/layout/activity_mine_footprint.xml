@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".module.mine.footprint.FootprintActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/mine_footprint"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/table_layout"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@color/transparent"
+            app:tabIndicatorColor="@color/color_FF7F50"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50" />
+
+        <com.yiyue.store.widget.viewpage.CustomViewPager
+            android:id="@+id/view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

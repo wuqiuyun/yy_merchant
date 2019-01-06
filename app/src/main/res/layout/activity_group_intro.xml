@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".module.im.groups.groupintro.GroupIntroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:right_text="@string/group_dialog_complete"
+            app:title_text="@string/group_edit_introduce"/>
+        
+        <com.yiyue.store.widget.MyEditText
+            android:id="@+id/et_intro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_240"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/im_shape_intro"
+            android:gravity="top"
+            android:hint="@string/group_edit_introduce_hint"/>
+    </LinearLayout>
+</layout>

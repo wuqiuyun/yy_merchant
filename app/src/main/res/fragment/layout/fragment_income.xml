@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dp_5"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+                <TableRow
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/color_343434"
+                        android:textSize="@dimen/sp_17"
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_income"/>
+                    <TextView
+                        android:id="@+id/tv_orders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/orders"/>
+                    <View android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:textColor="@color/color_343434"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"/>
+                    <TextView
+                        android:onClick="@{click.onClick}"
+                        android:textColor="@color/color_343434"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_total_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textSize="@dimen/sp_17"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:maxWidth="@dimen/dp_200"
+                        android:drawableRight="@drawable/right"/>
+                </TableRow>
+                <include layout="@layout/layout_line"/>
+                <RadioGroup
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/rg_filtrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_stroke_red"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_1">
+                    <RadioButton
+                        android:paddingTop="@dimen/dp_5"
+                        android:paddingBottom="@dimen/dp_5"
+                        android:paddingRight="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:id="@+id/tab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_left_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="分类"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableLeft="@drawable/selector_bull_category"
+                        android:textColor="@drawable/tv_text_selector" />
+                    <RadioButton
+                        android:paddingTop="@dimen/dp_5"
+                        android:paddingBottom="@dimen/dp_5"
+                        android:paddingRight="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:id="@+id/tab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_right_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="月份"
+                        android:checked="false"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableLeft="@drawable/selector_bull_month"
+                        android:textColor="@drawable/tv_text_selector" />
+                </RadioGroup>
+                <com.yiyue.store.widget.viewpage.CustomViewPager
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:id="@+id/view_page"
+                    android:overScrollMode="never"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_220"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</layout>

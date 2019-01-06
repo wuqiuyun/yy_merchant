@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15"
+        android:background="@color/white"
+        >
+        <TableRow
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_343434"
+                    android:textSize="@dimen/sp_17"
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_spending"/>
+                <TextView
+                    android:id="@+id/tv_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orders"/>
+                <View android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:textColor="@color/color_343434"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"/>
+                <TextView
+                    android:onClick="@{click.onClick}"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_total_spending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="@dimen/sp_20"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/dp_200"
+                    android:textColor="@color/color_343434"
+                    android:drawableRight="@drawable/right"/>
+            </TableRow>
+        <include layout="@layout/layout_line"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_spending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</layout>

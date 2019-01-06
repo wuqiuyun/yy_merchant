@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tv_project_type"
+            android:text="@string/project_income"
+            android:textColor="@color/color_343434"
+            android:textSize="@dimen/sp_16"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_below="@id/tv_project_type"
+            android:textSize="@dimen/sp_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:text="2018-09-05 16:25"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_order_id"
+            android:layout_toRightOf="@id/tv_project_type"
+            android:layout_alignBottom="@id/tv_project_type"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:textColor="@color/color_343434"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(单号：123214343243)"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+600"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_red"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_project_type"/>
+
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/sp_12"
+            android:text=""
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="@dimen/dp_5"/>
+
+        <View
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@id/tv_hint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_EFEFEF"/>
+    </RelativeLayout>
+</layout>

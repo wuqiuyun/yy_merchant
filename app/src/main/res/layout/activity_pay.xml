@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_EFEFEF"
+        tools:context=".module.mine.wallet.recharge.pay.PayActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/payment"
+            app:bg_color="@color/white"/>
+
+        <TableRow
+            android:layout_marginTop="@dimen/dp_0_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dp_10">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_343434"
+                android:text="@string/recharge_balance"/>
+            <TextView
+                android:id="@+id/tv_recharge_balance"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_red"
+                android:text="￥0.00"/>
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/sp_12"
+            android:padding="@dimen/dp_10"
+            android:text="@string/payment_method_select"/>
+
+        <com.yiyue.store.widget.UserMenuView
+            android:id="@+id/wechatpay"
+            android:onClick="@{click.onClick}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:left_icon="@drawable/icon_wechatpay"
+            app:title_text="@string/payment_wechat"
+            android:background="@color/white"
+            app:right_icon="@drawable/icon_selected"/>
+
+        <com.yiyue.store.widget.UserMenuView
+            android:id="@+id/alipay"
+            android:layout_marginTop="@dimen/dp_0_5"
+            android:onClick="@{click.onClick}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:left_icon="@drawable/icon_alipay"
+            app:title_text="@string/alipay"
+            android:background="@color/white"
+            app:right_icon="@drawable/icon_selected"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:onClick="@{click.onClick}"
+            android:layout_marginTop="@dimen/dp_80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:text="@string/submit"/>
+    </LinearLayout>
+</layout>

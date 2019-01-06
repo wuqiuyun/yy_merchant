@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--这里是设置progressbar的背景样式-->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/bar_background" />
+
+    <!--这里是设置progressbar的进度条样式-->
+    <item android:id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/bar_progress"
+            android:scaleWidth="100%" />
+    </item>
+</layer-list>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/im_shape_recom_friend_dialog"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_4"
+    android:paddingLeft="@dimen/dp_8"
+    android:paddingRight="@dimen/dp_8"
+    android:paddingTop="@dimen/dp_4">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv_toperson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recom_to"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_to_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_14"
+            tools:text="昵称" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_red_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_8">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8"
+            android:src="@drawable/im_avatar" />
+
+        <RelativeLayout
+            android:id="@+id/layout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_head">
+
+            <TextView
+                android:id="@+id/tv_content_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_4"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_14"
+                tools:text="作品名称" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content_name"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_3"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_12"
+                tools:text="作品介绍作品介绍作品介绍" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_eee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv_recomm_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/group_dialog_cancel2"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_3"
+            android:background="@color/color_eee" />
+
+        <TextView
+            android:id="@+id/tv_recomm_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/group_dialog_ok"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_EFEFEF"
+        tools:context=".module.mine.wallet.withdraw.WithdrawActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:onClick="@{click.onClick}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bg_color="@color/white"
+            app:title_text="@string/wallet_transfer"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+            <TextView
+                android:id="@+id/tv_currency_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/transfer_currency_price"/>
+            <TextView
+                android:id="@+id/tv_cash_withdraw_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/sp_14"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/color_343434"
+                android:text="@string/transfer_currency_unit"/>
+        </TableRow>
+
+        <com.yiyue.store.widget.UserMenuView
+            android:onClick="@{click.onClick}"
+            android:id="@+id/transfer_object"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@color/white"
+            app:title_text="@string/transfer_object"
+            app:right_text="请选择转赠对象"
+            app:right_text_color="@color/color_343434"
+            app:right_icon="@drawable/icon_arrow_right"/>
+
+        <TableRow
+            android:layout_marginTop="@dimen/dp_0_5"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_343434"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="@string/transfer_number"/>
+
+            <EditText
+                android:id="@+id/et_transfer_number"
+                android:inputType="number"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:background="@null"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:textColorHighlight="@color/color_EFEFEF"
+                android:textColor="@color/color_343434"
+                android:hint="@string/transfer_number_input"/>
+
+        </TableRow>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:onClick="@{click.onClick}"
+            android:layout_marginTop="@dimen/dp_80"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_btn"/>
+    </LinearLayout>
+</layout>

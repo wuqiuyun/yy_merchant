@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- toast -->
+    <dimen name="size12">12sp</dimen>
+    <dimen name="toast_y_offset">64dip</dimen>
+    <integer name="config_toastDefaultGravity">0x00000051</integer>
+
+    <!-- statusbar -->
+    <dimen name="statusbar_view_height">25dp</dimen>
+</resources>

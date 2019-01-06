@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="@drawable/mine_bg_gradient"/>
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="true"
+            app:right_text="@string/mine_settings"
+            app:bg_drawable="@drawable/mine_bg_gradient"
+            app:title_text_color="@color/white"
+            app:right_text_color="@color/white"
+            app:title_text="@string/user_center"/>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/dp_120">
+           <View
+               android:id="@+id/view_top"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_80"
+               android:background="@drawable/mine_bg_gradient"/>
+
+           <View
+               android:layout_below="@id/view_top"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_100"
+               android:background="@color/color_F7F7F7"/>
+
+           <RelativeLayout
+               android:id="@+id/btn_user_info"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:onClick="@{click.onClick}"
+               android:layout_marginLeft="@dimen/dp_10"
+               android:background="@drawable/shape_bg_white"
+               android:layout_marginRight="@dimen/dp_10"
+               android:layout_marginBottom="@dimen/dp_10">
+
+               <ImageView
+                   android:id="@+id/iv_photo"
+                   android:layout_width="@dimen/dp_60"
+                   android:layout_height="@dimen/dp_60"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/dp_10"
+                   android:src="@drawable/meizi"/>
+
+               <LinearLayout
+                   android:layout_toRightOf="@id/iv_photo"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/dp_20"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:id="@+id/tv_user_name"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="@dimen/sp_16"
+                       android:textColor="@color/black"/>
+                   <TextView
+                       android:id="@+id/tv_user_id"
+                       android:textSize="@dimen/sp_12"
+                       android:layout_marginTop="@dimen/dp_6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/dark_gray"
+                       android:background="@drawable/shape_text_bg"
+                       android:paddingRight="@dimen/dp_10"
+                       android:paddingLeft="@dimen/dp_10"
+                       android:paddingBottom="@dimen/dp_3"
+                       android:paddingTop="@dimen/dp_3"/>
+               </LinearLayout>
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/dp_16"
+                   android:src="@drawable/icon_arrow_right"/>
+           </RelativeLayout>
+       </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="@color/white">
+           <com.yiyue.store.widget.UserMenuView
+               android:id="@+id/mine_wallet"
+               style="@style/RippleBtnTheme"
+               android:onClick="@{click.onClick}"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_55"
+               app:left_icon="@drawable/icon_wallet"
+               app:title_text="@string/mine_wallet"
+               app:right_icon="@drawable/icon_arrow_right"/>
+
+           <include layout="@layout/layout_line"/>
+
+           <com.yiyue.store.widget.UserMenuView
+               android:id="@+id/mine_collect"
+               style="@style/RippleBtnTheme"
+               android:onClick="@{click.onClick}"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_55"
+               app:left_icon="@drawable/icon_collect"
+               app:title_text="@string/mine_collect"
+               app:right_icon="@drawable/icon_arrow_right"/>
+
+           <include layout="@layout/layout_line"/>
+
+           <com.yiyue.store.widget.UserMenuView
+               android:visibility="gone"
+               android:id="@+id/mine_footprint"
+               android:onClick="@{click.onClick}"
+               style="@style/RippleBtnTheme"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_55"
+               app:left_icon="@drawable/icon_footprint"
+               app:title_text="@string/mine_footprint"
+               app:right_icon="@drawable/icon_arrow_right"/>
+
+           <!--<include layout="@layout/layout_line"/>-->
+
+           <com.yiyue.store.widget.UserMenuView
+               android:id="@+id/mine_recommend"
+               style="@style/RippleBtnTheme"
+               android:onClick="@{click.onClick}"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_55"
+               app:left_icon="@drawable/icon_recommend"
+               app:title_text="@string/mine_recommend"
+               app:right_icon="@drawable/icon_arrow_right"/>
+       </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_EFEFEF"/>
+    </LinearLayout>
+</layout>

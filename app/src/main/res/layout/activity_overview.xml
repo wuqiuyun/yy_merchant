@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/login_bg"
+        android:layout_height="match_parent">
+        <!-- 标题 -->
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            app:title_text="@string/overview"
+            android:layout_width="match_parent"
+            app:bg_color="@color/white"
+            android:layout_height="wrap_content"/>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dp_10"
+                android:layout_height="match_parent">
+                <include
+                    android:id="@+id/include_bill"
+                    layout="@layout/layout_overview_1"/>
+                <include
+                    android:id="@+id/include_bank"
+                    layout="@layout/layout_overview_2"
+                    />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+    </LinearLayout>
+
+</layout>

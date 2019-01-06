@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yiyue.store.widget.TitleView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/service_setting" />
+
+            <!--门店营业时间-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/stores_business_time"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <LinearLayout
+                    android:id="@+id/ll_stores_business_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{click.onClick}"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_stores_business_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="10:00-23:00"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_arrow_right" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--选择营业周期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:background="@color/alpha_95_white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center_vertical"
+                    android:text="@string/select_business_cycle"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_business_cycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_20"/>
+
+            </LinearLayout>
+
+            <!--门店工位数量-->
+            <RelativeLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_1">
+
+                <TextView
+                    android:id="@+id/tv_stores_station"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/stores_station_num"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_station_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/tv_stores_station"
+                    android:background="@drawable/edittext_bg_white"
+                    android:gravity="right"
+                    android:hint="@string/station_num"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/sp_14"
+                    android:maxLength="6"/>
+
+            </RelativeLayout>
+
+            <!--可提供服务的美发设施-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:background="@color/alpha_95_white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center_vertical"
+                    android:text="@string/service_facilities"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/service_facilities_cycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_20"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/login_text_bg"
+            android:onClick="@{click.onClick}"
+            android:text="@string/ok"
+            android:textColor="@color/alpha_75_white"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</layout>

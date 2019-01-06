@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bg_efefef"
+        android:orientation="vertical"
+        tools:context=".module.mine.wallet.recharge.RechargeActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/wallet_recharge"
+            app:bg_color="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_white"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_80"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/wallet_amount_recharge"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_74">
+                <TextView
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_gravity="top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_30"
+                    android:text="¥"/>
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:gravity="center|bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:textSize="@dimen/sp_28"
+                    android:digits="0123456789"
+                    android:textColor="@color/color_343434"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@color/color_EFEFEF"/>
+            <TextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/wallet_amount_recharge_max"/>
+            <Button
+                android:id="@+id/btn_ok"
+                android:onClick="@{click.onClick}"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:textColor="@color/white"
+                android:text="@string/determine"
+                android:textSize="@dimen/sp_18"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

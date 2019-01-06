@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="false"
+            app:right_text="@string/fi_more"
+            app:title_text="@string/fi_friend_info"></com.yiyue.store.widget.TitleView>
+
+        <RelativeLayout
+            android:id="@+id/layout_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_view"
+            android:background="@color/white">
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/iv_fi_photo"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/im_avatar" />
+
+            <TextView
+                android:id="@+id/tv_fi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_fi_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="无" />
+
+            <TextView
+                android:id="@+id/tv_fi_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fi_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="gone"
+                android:text="ID：00001" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_photo"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_set_remake"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_icon="@drawable/icon_arrow_right"
+                app:title_text="@string/fi_remake" />
+
+            <include
+                android:id="@+id/line_remake"
+                layout="@layout/layout_line" />
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_sex"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_text="无"
+                app:right_text_color="@color/color_666666"
+                app:title_text="@string/fi_sex" />
+
+            <include layout="@layout/layout_line" />
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_birthday"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_text="无"
+                app:right_text_color="@color/color_666666"
+                app:title_text="@string/fi_birthday" />
+
+            <include layout="@layout/layout_line" />
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_hobby"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_text="无"
+                app:right_text_color="@color/color_666666"
+                app:title_text="@string/fi_hobby" />
+
+            <include layout="@layout/layout_line" />
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_profession"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_text="无"
+                app:right_text_color="@color/color_666666"
+                app:title_text="@string/fi_profession" />
+
+            <include layout="@layout/layout_line" />
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_hairstyle"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_text="无"
+                app:right_text_color="@color/color_666666"
+                app:title_text="@string/fi_hairstyle" />
+
+            <include layout="@layout/layout_line" />
+
+            <com.yiyue.store.widget.UserMenuView
+                android:id="@+id/fi_faceture"
+                style="@style/RippleBtnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:onClick="@{click.onClick}"
+                app:right_text="无"
+                app:right_text_color="@color/color_666666"
+                app:title_text="@string/fi_faceture" />
+
+            <include layout="@layout/layout_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fi_btn_addfriend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/color_FF6600"
+                android:onClick="@{click.onClick}"
+                android:text="@string/fi_add_friend"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:id="@+id/fi_line"
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/fi_btn_sendmsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/color_FF6600"
+                android:onClick="@{click.onClick}"
+                android:text="@string/fi_sendmsg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

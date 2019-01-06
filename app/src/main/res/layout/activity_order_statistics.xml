@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/order_statistics" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill_vertical"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+
+                <com.yiyue.store.widget.UserMenuView
+                    android:id="@+id/mv_order_details"
+                    style="@style/RippleBtnTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    android:onClick="@{click.onClick}"
+                    android:textSize="@dimen/sp_13"
+                    app:left_icon="@drawable/icon_wallet"
+                    app:right_icon="@drawable/icon_arrow_right"
+                    app:title_text="全部订单明细" />
+
+                <include layout="@layout/layout_line" />
+
+                <RadioGroup
+                    android:id="@+id/rg_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_margin="@dimen/dp_20"
+                    android:background="@drawable/shape_btn_stroke_red"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_1">
+
+                    <RadioButton
+                        android:id="@+id/tab1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_left_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="今日"
+                        android:textColor="@drawable/tv_text_selector" />
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="match_parent"
+                        android:background="@color/login_text_bg" />
+
+                    <RadioButton
+                        android:id="@+id/tab2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_midle_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="昨日"
+                        android:textColor="@drawable/tv_text_selector" />
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="match_parent"
+                        android:background="@color/login_text_bg" />
+
+                    <RadioButton
+                        android:id="@+id/tab3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_midle_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="近7日"
+                        android:textColor="@drawable/tv_text_selector" />
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="match_parent"
+                        android:background="@color/login_text_bg" />
+
+                    <RadioButton
+                        android:id="@+id/tab4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_right_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="近30日"
+                        android:textColor="@drawable/tv_text_selector" />
+                </RadioGroup>
+
+                <com.yiyue.store.widget.viewpage.OrderViewPager
+                    android:id="@+id/view_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

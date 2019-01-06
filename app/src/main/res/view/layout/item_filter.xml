@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical">
+
+            <View android:layout_width="@dimen/dp_0"
+                  android:layout_height="@dimen/dp_1"
+                  android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_nearby"
+                android:drawablePadding="@dimen/dp_5"
+                android:onClick="@{click.onClick}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"
+                android:padding="@dimen/dp_10"
+                android:drawableRight="@drawable/icon_down"
+                android:text="@string/common_nearby"
+                android:textColor="@color/color_666667"/>
+
+            <View android:layout_width="@dimen/dp_0"
+                  android:layout_height="@dimen/dp_1"
+                  android:layout_weight="1.5"/>
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:onClick="@{click.onClick}"
+                android:drawablePadding="@dimen/dp_5"
+                android:layout_width="wrap_content"
+                android:drawableRight="@drawable/icon_down"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:padding="@dimen/dp_10"
+                android:text="@string/common_integrate_sort"
+                android:textColor="@color/color_666667"/>
+
+            <View android:layout_width="@dimen/dp_0"
+                  android:layout_height="@dimen/dp_1"
+                  android:layout_weight="1.5"/>
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:drawablePadding="@dimen/dp_5"
+                android:onClick="@{click.onClick}"
+                android:drawableRight="@drawable/icon_down"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:padding="@dimen/dp_10"
+                android:text="@string/common_filter"
+                android:textColor="@color/color_666667"/>
+
+            <View android:layout_width="@dimen/dp_0"
+                  android:layout_height="@dimen/dp_1"
+                  android:layout_weight="1"/>
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_filter_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</layout>

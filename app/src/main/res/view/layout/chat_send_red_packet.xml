@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_3"
+        tools:text="2018.11.17" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/ic_user"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/im_avatar" />
+
+        <RelativeLayout
+            android:id="@+id/layout_red_packet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_4"
+            android:layout_toLeftOf="@+id/ic_user">
+
+            <RelativeLayout
+                android:id="@+id/layout_red_content"
+                android:layout_width="@dimen/dp_220"
+                android:layout_height="wrap_content"
+                android:background="@drawable/frame_upper"
+                android:padding="@dimen/dp_8">
+
+                <ImageView
+                    android:id="@+id/iv_red_bg"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_margin="@dimen/dp_8"
+                    android:src="@drawable/red" />
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_red_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_red_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:singleLine="true"
+                        android:text="@string/words_numal"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_red_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:gravity="center|left"
+                        android:text="@string/get_red"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_216"
+                android:layout_height="@dimen/dp_20"
+                android:layout_below="@+id/layout_red_content"
+                android:layout_marginRight="@dimen/dp_4"
+                android:background="@drawable/frame_lower">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_12"
+                    android:text="意约红包"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

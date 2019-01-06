@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_et"
+    android:divider="@color/color_999999"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tv_delete_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_6"
+        android:text="@string/im_conver_delete" />
+
+    <TextView
+        android:id="@+id/tv_has_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_6"
+        android:text="@string/im_conver_has_read" />
+</LinearLayout>

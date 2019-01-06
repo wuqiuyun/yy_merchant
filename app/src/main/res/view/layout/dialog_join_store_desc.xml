@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="@dimen/dp_300"
+              android:layout_height="wrap_content"
+              android:background="@drawable/im_shape_dialog"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_join_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center"
+        android:text="@string/im_store_join"
+        android:textColor="@color/alpha_80_black"
+        android:textSize="@dimen/sp_15"/>
+
+    <TextView
+        android:id="@+id/tv_join_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/im_store_join_desc"
+        android:textColor="@color/alpha_60_black"
+        android:textSize="@dimen/sp_13"/>
+    <TextView
+        android:id="@+id/tv_join_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/im_store_join_money"
+        android:textColor="@color/alpha_60_black"
+        android:textSize="@dimen/sp_13"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/color_eee"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_join_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/group_dialog_cancel"
+            android:textColor="@color/color_007AFF"
+            android:textSize="@dimen/sp_16"/>
+
+        <View
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="match_parent"
+            android:background="@color/color_eee"
+            />
+
+        <TextView
+            android:id="@+id/tv_join_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/im_join_ok"
+            android:textColor="@color/color_007AFF"
+            android:textSize="@dimen/sp_16"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_280"
+        android:orientation="vertical"
+        android:background="@drawable/shape_bg_white_button">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:src="@drawable/meizi"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="艾米"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/sp_14"
+                android:maxLines="1"
+                android:maxEms="3"
+                android:ellipsize="end"/>
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/rating_bar"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_16"
+                android:rating="0"
+                android:isIndicator="true"
+                app:mrb_secondaryProgressTint="@color/color_FFA200"
+                app:mrb_progressTint="@color/color_FFA200"
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/text_color"
+                android:text="@string/stylist_order_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_total_performance"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/text_color"
+                android:text="8单"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/text_color"
+                android:text="@string/stylist_order_price_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_amount"
+                android:textSize="@dimen/sp_12"
+                android:text="￥12123.32"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+    </LinearLayout>
+</layout>

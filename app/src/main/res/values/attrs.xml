@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- common -->
+    <attr name="title_text" format="string" />
+    <attr name="title_text_color" format="color" />
+    <attr name="right_text" format="string" />
+    <attr name="right_text_color" format="color" />
+    <attr name="right_icon" format="reference" />
+    <attr name="left_icon" format="reference" />
+
+    <!-- HomeButtonView -->
+    <declare-styleable name="HomeButtonView">
+        <attr name="label_title" format="string" />
+        <attr name="label_color" format="color" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <!-- 标题栏 -->
+    <declare-styleable name="TitleView">
+        <attr name="bg_color" format="color" />
+        <attr name="title_text" />
+        <attr name="title_text_sub" format="string"/>
+        <attr name="left_text" format="string" />
+        <attr name="left_text_color" format="color" />
+        <attr name="right_text" />
+        <attr name="left_icon" />
+        <attr name="right_icon" />
+        <attr name="right_icon_sub" format="reference"/>
+        <attr name="title_text_color" />
+        <attr name="right_text_color" />
+        <attr name="isHome" format="boolean" />
+        <attr name="bg_drawable"/>
+    </declare-styleable>
+
+    <!-- UserMenuView -->
+    <declare-styleable name="UserMenuView">
+        <attr name="title_text" />
+        <attr name="right_text" />
+        <attr name="right_icon" />
+        <attr name="left_icon" />
+        <attr name="right_text_size" format="dimension" />
+        <attr name="right_text_color" />
+        <attr name="title_text_color" />
+        <attr name="title_text_size" format="dimension" />
+        <attr name="content_text" format="string" />
+        <attr name="content_text_size" format="dimension" />
+        <attr name="content_text_color" format="color" />
+
+        <attr name="content_text_sub" format="string" />
+        <attr name="content_text_sub_size" format="dimension" />
+        <attr name="content_text_sub_color" format="color" />
+
+        <attr name="right_icon_clickable" format="boolean" />
+    </declare-styleable>
+
+    <!--索引字母控件-->
+    <declare-styleable name="WaveSideBar">
+        <attr name="sidebar_lazy_respond" format="boolean" />
+        <attr name="sidebar_text_size" format="dimension" />
+        <attr name="sidebar_text_color" format="color" />
+        <attr name="sidebar_max_offset" format="dimension" />
+        <attr name="sidebar_position" format="enum">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="sidebar_text_alignment" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialRatingBar">
+        <attr name="mrb_progressTint" format="color|reference" />
+        <attr name="mrb_progressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_secondaryProgressTint" format="color|reference" />
+        <attr name="mrb_secondaryProgressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_progressBackgroundTint" format="color|reference" />
+        <attr name="mrb_progressBackgroundTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_indeterminateTint" format="color|reference" />
+        <attr name="mrb_indeterminateTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_fillBackgroundStars" format="boolean" />
+    </declare-styleable>
+
+    <!--EditText 下划线-->
+    <declare-styleable name="LineEditText">
+        <attr name="TextColor" format="color" />
+        <attr name="lineColor_click" format="color" />
+        <attr name="lineColor_unclick" format="color" />
+        <attr name="linePosition" format="integer" />
+        <attr name="cursor" format="reference" />
+        <attr name="have_line" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FriendItemView">
+        <attr name="vw_tv_content" format="string" />
+        <attr name="vw_tv_message" format="string" />
+        <attr name="vw_name" format="string" />
+        <attr name="vw_iv_pic" format="reference" />
+    </declare-styleable>
+
+    <!-- XTextview-->
+    <declare-styleable name="AutoTextView">
+        <attr name="textSize" />
+        <attr name="textColor" />
+    </declare-styleable>
+    <declare-styleable name="XTextView">
+        <attr name="debugText" format="string" />
+        <attr name="minTextSize" format="dimension" />
+        <attr name="maxTextSize" format="dimension" />
+        <attr name="autoZoom" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageViewPagerAttrs">
+        <attr name="dotsViewHeight" format="dimension" />
+        <attr name="dotsSpacing" format="dimension" />
+        <attr name="dotsMargin" format="dimension" />
+        <attr name="dotsFocusImage" format="reference" />
+        <attr name="dotsBlurImage" format="reference" />
+        <attr name="dotsBackground" format="reference|color" />
+        <attr name="dotsBgAlpha" format="float" />
+        <attr name="dotsGravity">
+            <enum name="RIGHT" value="5" />
+            <enum name="LEFT" value="3" />
+            <enum name="CENTER_HORIZONTAL" value="17" />
+        </attr>
+        <attr name="changeInterval" format="integer" />
+        <attr name="autoChange" format="boolean" />
+        <attr name="recycleble" format="boolean" />
+        <attr name="dotsIsAdd" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SectionPinListView">
+        <attr name="section_pin" format="boolean" />
+    </declare-styleable>
+
+    <!-- swipeMenu -->
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+    <!-- 圆角-->
+    <declare-styleable name="MyRoundLayout">
+        <attr name="roundradius" format="dimension" />
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

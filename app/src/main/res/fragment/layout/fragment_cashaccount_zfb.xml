@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_EFEFEF">
+        <TextView
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center|left"
+            android:text="请绑定本人支付宝账号"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/alpha_95_white"
+            android:orientation="vertical">
+
+            <!--手机号-->
+            <RelativeLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/alpha_95_white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/icom_name_nor" />
+
+                <EditText
+                    android:id="@+id/et_zfb_name"
+                    style="@style/EditTextDefultStyle"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:drawablePadding="13dp"
+                    android:hint="@string/zfb_name"
+                    android:maxLines="1"
+                    android:paddingLeft="13dp"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColorHint="@color/login_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:background="@color/login_bg" />
+
+            <!--验证码-->
+            <RelativeLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/alpha_95_white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/icon_number_nor" />
+
+                <EditText
+                    android:id="@+id/et_zfb_id"
+                    style="@style/EditTextDefultStyle"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:drawablePadding="13dp"
+                    android:hint="@string/zfb_payid"
+                    android:maxLines="1"
+                    android:paddingLeft="13dp"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColorHint="@color/login_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_zfb_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_60"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_btn"
+            android:onClick="@{click.onClick}"
+            android:text="提交"
+            android:textColor="@color/alpha_95_white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</layout>

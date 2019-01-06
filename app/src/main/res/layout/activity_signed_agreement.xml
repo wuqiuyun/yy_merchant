@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_95_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.yiyue.store.widget.TitleView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/agreement" />
+
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:text="@string/agreement_title"
+                        android:textColor="@color/alpha_95_black"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content01"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content02"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content03"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content04"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content05"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content06"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content07"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content08"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content09"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content10"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_content11"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/alpha_95_black"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:background="@drawable/shape_agreement_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160"/>
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/login_text_bg"
+            android:onClick="@{click.onClick}"
+            android:text="@string/agree_agreement"
+            android:textColor="@color/alpha_95_white"
+            android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

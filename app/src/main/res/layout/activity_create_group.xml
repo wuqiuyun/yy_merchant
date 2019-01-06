@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".module.im.groups.creategroup.CreateGroupActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/cg_create_group_title"
+            app:right_text="@string/search">
+            
+            
+        </com.yiyue.store.widget.TitleView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/cg_iv_add_head"
+                android:layout_width="@dimen/dp_76"
+                android:layout_height="@dimen/dp_76"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_50"
+                android:src="@drawable/add_head_photo"/>
+
+            <com.yiyue.store.widget.LineEditText
+                android:id="@+id/cg_et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cg_iv_add_head"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:layout_marginTop="@dimen/dp_50"
+                android:hint="@string/cg_write_group_name"
+                app:lineColor_unclick="@color/color_FFB848"
+                app:linePosition="5"/>
+
+            <TextView
+                android:id="@+id/cg_tv_create_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cg_tr_serve_declare"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_50"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/cg_create_group"
+                android:textColor="@color/alpha_95_white"
+                android:textSize="@dimen/sp_15"/>
+
+            <TableRow
+                android:id="@+id/cg_tr_serve_declare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:text="@string/cg_agree"
+                    android:textColor="@color/color_999999"/>
+
+                <TextView
+                    android:id="@+id/cg_tv_serve_declare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:background="@drawable/create_group_btn_bg"
+                    android:text="@string/cg_agree_declare"
+                    android:textColor="@color/color_FFB848"/>
+            </TableRow>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

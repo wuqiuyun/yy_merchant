@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:background="@color/color_EFEFEF">
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_botton_dialog_white"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableEnd="@drawable/icon_down"
+            android:padding="@dimen/dp_5"
+            android:visibility="gone"
+            tools:text="2018年12月"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:layout_marginStart="@dimen/dp_16"
+            tools:text="本月"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_0"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:textSize="@dimen/sp_14"
+            tools:text="累计收益:8888元"/>
+    </LinearLayout>
+</layout>

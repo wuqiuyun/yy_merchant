@@ -1,0 +1,9 @@
+diff a/app/src/main/java/com/yiyue/store/module/mine/info/UserInfoActivity.java b/app/src/main/java/com/yiyue/store/module/mine/info/UserInfoActivity.java	(rejected hunks)
+@@ -114,7 +114,6 @@
+                     if (imageType == 0) {
+                         PhoneUtil.toCrop(UserInfoActivity.this, uri, FilePathUtil.getCacheCrop() + "image_photo.jpg");
+                     } else {
+-//                        compressPicAndUpload(imagePath);
+                         PhoneUtil.toCrop(UserInfoActivity.this, uri, FilePathUtil.getCacheCrop() + "image_photo.jpg", 8, 5);
+                     }
+                     break;

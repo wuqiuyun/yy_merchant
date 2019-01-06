@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".module.mine.works.many.ManyWorksActivity">
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            app:title_text="@string/works_many"
+            app:title_text_sub="(0)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:background="@color/white"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="@color/color_EFEFEF"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

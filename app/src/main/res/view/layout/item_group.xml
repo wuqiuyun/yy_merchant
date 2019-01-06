@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:scaleType="fitXY"
+                android:src="@drawable/im_avatar"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_424242"
+                android:textSize="@dimen/sp_16"
+                android:text="造型VIP群"/>
+
+            <!--240人 9万+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_member_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:background="@color/color_FFA200"
+                    android:padding="@dimen/dp_1"
+                    android:minWidth="@dimen/dp_45"
+                    android:gravity="center"
+                    tools:text="240人"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_group_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_7"
+                android:maxEms="16"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_eee"/>
+</LinearLayout>

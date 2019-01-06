@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--消息相关-->
+    <string name="debug_head_url">http://img.my.csdn.net/uploads/201508/05/1438760758_3497.jpg</string>
+    <string name="search">搜索</string>
+    <string name="notice">公告</string>
+    <string name="system_notice">系统消息</string>
+    <string name="oicq_msg">消息</string>
+    <string name="interact_msg">互动消息</string>
+    <string name="system_notice_title">系统通知</string>
+    <string name="system_order_title">订单交易</string>
+    <string name="oicq_friend">我的好友</string>
+    <string name="oicq_group">我的群组</string>
+    <string name="agree">同意</string>
+    <string name="refuse">拒绝</string>
+    <string name="direct_call">Direct</string>
+    <string name="relay_call">Relay</string>
+
+    <string name="add_friend">添加好友</string>
+    <string name="add_friend_suc">添加好友申请已发出</string>
+    <string name="add_friend_had_suc">好友已添加成功</string>
+    <string name="add_group">添加群组</string>
+    <string name="im_clear">清空</string>
+    <string name="im_stsnotice_item">您的好友通过分享消费了服务，你获得了3.00个代币奖励，请及时查看</string>
+
+    <string name="im_add_money">您选择加入其他服务，类型： %s，价格： %f，请您同意加价</string>
+    <string name="im_had_agree">已同意</string>
+    <string name="im_add_store">申请加入您的门店</string>
+    <string name="im_error_data">数据异常，请下拉刷新数据！</string>
+
+
+    <string name="im_outline">您的账号离线时间过长，正在重新登录!</string>
+    <string name="Invite_you_to_join_a_group_chat">邀请你加入了群聊</string>
+    <string name="Invite_you_to_remove_group_chat">将你移出了群聊</string>
+
+    <!--好友资料相关-->
+    <string name="fi_friend_info">好友资料</string>
+    <string name="fi_more">···</string>
+    <string name="fi_remake">设置备注</string>
+    <string name="fi_sex">性别</string>
+    <string name="fi_place">常住地点</string>
+    <string name="fi_hobby">爱好</string>
+    <string name="fi_profession">职业</string>
+    <string name="fi_birthday">生日</string>
+    <string name="fi_faceture">脸型</string>
+    <string name="fi_hairstyle">发长</string>
+    <string name="fi_common_serve">常用服务</string>
+    <string name="fi_sendmsg">发消息</string>
+    <string name="fi_shield">屏蔽</string>
+    <string name="fi_cancel_shield">取消屏蔽</string>
+    <string name="fi_delete_friend">删除好友</string>
+    <string name="fi_add_friend">加好友</string>
+    <string name="fi_delete_desc">确认将联系人备注删除，删除后消息记录将会清空!</string>
+    <string name="fi_delete_cancel">取消</string>
+    <string name="fi_set_remake">设置备注</string>
+    <string name="fi_remake_save">保存</string>
+
+    <!--搜索页面相关-->
+    <string name="ims_search">搜索</string>
+    <string name="ims_search_hint">请输入好友ID/昵称</string>
+    <string name="ims_add_friend">添加</string>
+    <string name="ims_send">发送</string>
+    <string name="ims_friend_verifica">朋友验证</string>
+    <string name="ims_friend_reason">你需要发送验证申请，等待对方通过</string>
+    <string name="ims_remake">您未填写备注信息</string>
+    <string name="ims_remake_sucs">保存备注成功</string>
+
+    <!--聊天页面相关-->
+    <string name="chat_name">用户昵称</string>
+    <string name="attach_picture">图片</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="attach_location">位置</string>
+    <string name="attach_file">文件</string>
+    <string name="attach_voice_call">语音通话</string>
+    <string name="attach_vodeo_call">视频通话</string>
+    <string name="attach_red_packet">红包</string>
+    <string name="attach_transfer_accounts">转账</string>
+    <string name="attach_add_money">发送申请加价</string>
+    <string name="attach_add_money_status">申请加价状态</string>
+    <string name="attach_recommend">推荐</string>
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="Recording_without_permission">无录音权限</string>
+    <string name="The_recording_time_is_too_short">录音时间太短</string>
+    <string name="send_failure_please">发送失败，请检测服务器是否连接</string>
+    <string name="Send_voice_need_sdcard_support">发送语音需要sdcard支持</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="Is_download_voice_click_later">正在下载语音，稍后点击</string>
+    <string name="cant_find_pictures">找不到图片</string>
+    <string name="File_does_not_exist">文件不存在</string>
+    <string name="sd_card_does_not_exist">SD卡不存在，不能拍照</string>
+
+    <!--语音通话页面相关-->
+    <string name="mute">静音</string>
+    <string name="Hands_free">免提</string>
+    <string name="hang_up">挂断</string>
+    <string name="answer">接听</string>
+    <string name="call_duration">通话时长</string>
+    <string name="Refused">已拒绝</string>
+    <string name="The_other_party_has_refused_to">对方已拒绝</string>
+    <string name="The_other_is_not_online">对方不在线</string>
+    <string name="The_other_is_on_the_phone">对方正在通话中</string>
+    <string name="The_other_party_did_not_answer">对方未接听</string>
+    <string name="did_not_answer">未接听</string>
+    <string name="Has_been_cancelled">已取消</string>
+    <string name="Are_connected_to_each_other">正在连接对方……</string>
+    <string name="Is_not_yet_connected_to_the_server">尚未连接至服务器</string>
+    <string name="In_the_call">通话中……</string>
+    <string name="The_other_party_refused_to_accept">对方拒绝接受！……</string>
+    <string name="Connection_failure">连接建立失败！……</string>
+    <string name="The_other_party_is_not_online">对方不在线，请稍后再拨……</string>
+    <string name="The_other_is_on_the_phone_please">对方正在通话中，请稍后再拨</string>
+    <string name="The_other_is_hang_up">对方已经挂断</string>
+    <string name="The_other_party_did_not_answer_new">对方未接听</string>
+    <string name="illegal_user_name">用户名不合法</string>
+    <string name="can_not_connect_chat_server_connection">连接不到聊天服务器</string>
+    <string name="call_version_inconsistent">通话协议版本不一致</string>
+    <string name="have_connected_with">已经和对方建立连接</string>
+    <string name="network_unstable">网络不稳定</string>
+    <string name="no_call_data">没有通话数据</string>
+    <string name="hanging_up">正在挂断..</string>
+    <string name="not_connect_to_server">尚未连接至服务器，请稍后重试</string>
+
+    <!--视频通话相关-->
+    <string name="recording_video">录制视频</string>
+    <string name="stop_record">停止录制</string>
+    <string name="switch_camera">切换摄像头</string>
+    <string name="capture_image">抓取图片</string>
+    <string name="record_finish_toast">录制完毕，文件存储在%s</string>
+    <string name="connect_failuer_toast">请检查网络或稍候重试</string>
+    <string name="network_unavailable">网络连接不可用，请检查网络</string>
+
+    <!--群组相关-->
+    <string name="group_edit_title">编辑群组</string>
+    <string name="group_edit_save">保存</string>
+    <string name="group_edit_name">群组名称</string>
+    <string name="group_edit_join">加群验证</string>
+    <string name="group_edit_introduce">群组介绍</string>
+    <string name="group_edit_transfer">群组转让</string>
+    <string name="group_edit_dissolve">群组解散</string>
+    <string name="group_edit_introduce_hint">点击填写群介绍，让大家更了解你的群</string>
+
+    <string name="group_dialog_name">修改群名</string>
+    <string name="group_dialog_name_hint">请输入新群名</string>
+    <string name="group_dialog_dissolve">解散群提示</string>
+    <string name="group_dialog_dissolve_content">&#8195;&#8195;您将解散 %s，解散后将失去与群友的联系，是否确定解散？</string>
+    <string name="group_dialog_transfer">转让群提示</string>
+    <string name="group_dialog_transfer_content">&#8195;&#8195;%s&#8195;将成为该群群主，确定后你将立即失去群主身份，是否确定转让？</string>
+    <string name="group_dialog_cancel">再考虑下</string>
+    <string name="group_dialog_cancel2">取消</string>
+    <string name="group_dialog_ok">确定</string>
+    <string name="group_dialog_complete">完成</string>
+
+    <string name="group_add_friend">添加好友到群</string>
+    <string name="group_add_friend_add">邀请</string>
+
+    <string name="group_transfer">邀请</string>
+
+
+    <!--群资料页面相关-->
+    <string name="gi_name">暂无群名</string>
+    <string name="gi_introduce">群组介绍</string>
+    <string name="gi_introduce_nul">暂时没有群组介绍</string>
+    <string name="gi_show_allmembers">显示全部成员</string>
+    <string name="gi_coupons">群主优惠券</string>
+    <string name="gi_disturb">消息免打扰</string>
+    <string name="gi_aply_join">申请加入</string>
+    <string name="gi_member_num">(%d)</string>
+    <string name="gi_report">举报</string>
+    <string name="gi_exit">退出</string>
+
+    <string name="gi_cannot_tranself">不能转让给自己</string>
+
+    <string name="ag_apply_msg">申请消息</string>
+    <string name="ag_apply_msg_hint">请输入申请加群验证消息（20字节）</string>
+    <string name="ag_apply_send">发送申请</string>
+    <string name="ag_apply_send_suc">发送申请成功</string>
+    <string name="ag_dialog_quit_group">你将退出 %s，确定是否退出？</string>
+    <string name="ag_dialog_quit_title">退出群提示</string>
+
+    <!--群成员页面相关-->
+    <string name="gm_title_name">群成员</string>
+    <string name="gm_move_out">移出</string>
+
+    <string name="gm_dialog_remove_title">移出成员提示</string>
+    <string name="gm_dialog_remove_content">您正在移出群成员 %s，移出后该成员将收到被移出消息，是否确定移出？</string>
+
+
+    <!-- 搜索内容hint-->
+    <string name="hint_search_group">请输入群组ID/昵称</string>
+
+    <!--新建群页面相关-->
+    <string name="cg_create_group_title">新建群组</string>
+    <string name="cg_write_group_name">填写群名称(2-10个字)</string>
+    <string name="cg_create_group">创建群组</string>
+    <string name="cg_agree">我已阅读并同意</string>
+    <string name="cg_agree_declare">服务声明</string>
+
+    <!-- 搜索内容hint-->
+    <string name="sg_receive_add_friend">好友添加请求</string>
+    <string name="sg_receive_add_desc">&#8195;&#8195;%s&#8195;申请加您为好友</string>
+    <string name="sg_receive_addgroup_desc">申请加入&#8195;&#8195;%s&#8195;</string>
+    <string name="sg_receive_add_group">加群申请</string>
+    <!-- 系统消息-->
+    <string name="smsg_friend_notice">好友通知</string>
+    <string name="smsg_group_notice">群消息</string>
+
+    <!-- 红包相关 -->
+    <string name="send_a_rp">给你发了一个红包</string>
+    <string name="words_numal">大吉大利, 今晚吃鸡!</string>
+    <string name="look_for_luck">看看大家的手气</string>
+    <string name="red_notice_content_signle">单个红包金额不可超过200元</string>
+    <string name="money">红包金额</string>
+    <string name="money_size">元</string>
+    <string name="money_numal">0.00</string>
+    <string name="words">留言</string>
+    <string name="send_red">发红包</string>
+    <string name="insert_money">塞钱进红包</string>
+    <string name="red_content_bottom">可直接使用收到的零钱发红包</string>
+    <string name="accept">接受</string>
+    <string name="single_rp">红包金额%1$s元,等待对方领取</string>
+    <string name="rp_no_grab_tip">未领取的红包，将于24小时后发起退款</string>
+    <string name="watch_rp_history">查看红包记录</string>
+    <string name="rp_my_red_history">查看我的红包记录</string>
+    <string name="get_red">领取红包</string>
+    <string name="rp_red_packet">红包</string>
+    <string name="rp_self_open_red">你领取了%s的红包</string>
+    <string name="rp_other_open_red">%s领取了你的红包</string>
+
+    <string name="rp_cannot_null">红包金额不能为空</string>
+    <string name="rp_desc">已存入余额，可直接提现</string>
+    <string name="rp_desc_other">对方已收取红包</string>
+    <string name="rp_desc_outday">红包已失效</string>
+    <string name="rp_desc_sending">红包还未领取</string>
+    <string name="rp_send_red_packet">发红包</string>
+    <string name="rp_curr_balance">当前余额：</string>
+    <string name="rp_send_red_packet_explian">说明</string>
+
+    <string name="rp_havenot_receive">1个红包共%.2f元，等待对方领取</string>
+    <string name="rp_have_receive">1个红包共%.2f元，对方已领取</string>
+    <string name="rp_have_outtime">1个红包共%.2f元，已过期</string>
+    <string name="rp_havenot_trans_receive">转账%.2f元，等待对方收取</string>
+    <string name="rp_have_trans_receive">转账%.2f元，对方已收取</string>
+    <string name="rp_have_trans_outtime">转账%.2f元，已过期</string>
+
+    <string name="rp_records_receive">%d个红包共%.2f元</string>
+    <string name="rp_records_money">%.2f</string>
+    <string name="rp_send_record">发出的红包</string>
+    <string name="rp_recv_record">收到的红包</string>
+
+    <string name="rp_total_send">共发出</string>
+    <string name="rp_total_recv">共收到</string>
+
+    <!-- 转账相关 -->
+    <string name="transfer_name">转账</string>
+    <string name="transfer_hint">转账留言</string>
+    <string name="transfer_money">转账金额</string>
+    <string name="transfer_sure">确认转账</string>
+    <string name="transfer_money_num">$s元</string>
+    <string name="transfer_toyou">转账给你</string>
+    <string name="transfer_get_trans">接收转账</string>
+    <string name="transfer_toother">转账给对方</string>
+    <string name="transfer_desc_sending">转账还未收取</string>
+    <string name="transfer_money_inother">已进入对方钱包</string>
+    <string name="transfer_desc_outday">转账已过期</string>
+    <string name="transfer_money_inme">钱已入袋</string>
+
+    <string name="transfer_detail_name">转账详情</string>
+    <string name="transfer_had_receive">已转入你的余额</string>
+    <string name="transfer_records">查看转账记录</string>
+    <string name="transfer_no_grab_tip">未收取的转账，将于24小时后发起退款</string>
+
+    <string name="transfer_records_receive">%d个转账记录共%.2f元</string>
+
+    <string name="transfer_send_record">发出的转账</string>
+    <string name="transfer_recv_record">收到的转账</string>
+
+    <!--推荐好友-->
+    <string name="recom_name">推荐好友</string>
+    <string name="recom_to">推荐给</string>
+
+    <!--im 地图-->
+    <string name="im_map">地图</string>
+    <string name="im_navigation">导航</string>
+
+    <!-- 公告-->
+    <string name="producer">发布者：</string>
+    
+    <!--im 会话列表-->
+    <string name="im_conver_delete">删除聊天</string>
+    <string name="im_conver_has_read">设为已读</string>
+
+    <!--美发师入驻或者邀请-->
+    <string name="im_store_join">店内美发师</string>
+    <string name="im_platform_join">平台美发师</string>
+    <string name="im_join_ok">确定申请</string>
+
+    <string name="im_store_join_desc">&#8195;【店内美发师】门店的全职美发师，由门店发放相应的佣金，每个美发师只能入驻一家门店，入住后不可再申请加入其他门店，只有与入驻门店解约后恢复申请入驻权限；</string>
+    <string name="im_store_join_money">&#8195;收益占比：门店占服务金额的85%，店内美发师的收益由门店老板发放。</string>
+
+    <string name="im_platform_join_desc">&#8195;【平台美发师】可以入驻多家门店（不限制入驻门店数量和地理位置）入驻申请发出后门店通过申请即可入驻成功，完成订单后马上获得相应的佣金；</string>
+    <string name="im_platform_join_money">&#8195;收益占比：门店占25%，美发师占60%，门店的25%包含（水电费、场地费、大型设备使用费，不含烫染护的耗材费用）</string>
+
+</resources>

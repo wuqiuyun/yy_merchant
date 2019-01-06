@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_bg">
+
+        <RelativeLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/color_333333">
+
+            <View
+                android:id="@+id/view"
+                android:visibility="gone"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/color_7c7c7c" />
+
+            <TextView
+                android:id="@+id/btn_share_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/view"
+                android:background="@color/color_333333"
+                android:onClick="@{click.onClick}"
+                android:text="@string/share_referral_code"
+                android:textColor="@color/alpha_75_white"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/btn_reward_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_toRightOf="@id/view"
+                android:background="@color/color_333333"
+                android:onClick="@{click.onClick}"
+                android:text="@string/selected_reward_type"
+                android:textColor="@color/alpha_75_white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_bottom"
+            android:orientation="vertical">
+
+            <com.yiyue.store.widget.TitleView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:right_text="@string/description"
+                app:title_text="@string/mine_recommend" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_referral_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:gravity="center_horizontal"
+                    android:text="YYYYYY"
+                    android:textColor="@color/alpha_95_white"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/my_referral_code"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_referral_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_bg2"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dp_5"
+                android:text="@string/referral_hint"
+                android:textColor="@color/alpha_95_white"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/referral_user"
+                        android:textColor="@color/alpha_95_black"
+                        android:textSize="@dimen/sp_14" />
+
+
+                    <View
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_1_5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:background="@color/login_bg" />
+
+                    <View
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_1_5"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:background="@color/login_bg" />
+
+                </RelativeLayout>
+
+                <!--有推荐人-->
+                <LinearLayout
+                    android:id="@+id/ll_has_binding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <com.yl.core.widget.CircleImageView
+                        android:id="@+id/civ_binding_head"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:src="@drawable/meizi" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_5"
+                        android:paddingRight="@dimen/dp_5">
+
+                        <RelativeLayout
+                            android:id="@+id/rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true">
+
+                            <TextView
+                                android:id="@+id/tv_binding_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="艾米"
+                                android:textColor="@color/alpha_95_black"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/tv_binding_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="2018-10-10 19:35"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/sp_12" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_binding_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/sp_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--无推荐人-->
+                <LinearLayout
+                    android:id="@+id/ll_no_binding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/no_user"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_binding"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:background="@drawable/shape_agree_btn"
+                        android:gravity="center"
+                        android:onClick="@{click.onClick}"
+                        android:text="@string/binding"
+                        android:textColor="@color/alpha_95_white"
+                        android:textSize="@dimen/sp_13" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--推荐记录-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/alpha_95_white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_invite_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/referral_record"
+                        android:textColor="@color/alpha_95_black"
+                        android:textSize="@dimen/sp_14" />
+
+
+                    <View
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_1_5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:background="@color/login_bg" />
+
+                    <View
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_1_5"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:background="@color/login_bg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

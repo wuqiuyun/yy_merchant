@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/alpha_95_white"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_10">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/civ_head_photo"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:src="@drawable/meizi" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toRightOf="@id/civ_head_photo"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxEms="4"
+                    android:maxLines="1"
+                    android:text="艾米"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_16" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/material_rating_bar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="@dimen/dp_88"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/tv_name"
+                    android:isIndicator="true"
+                    android:rating="0.0"
+                    app:mrb_progressTint="@color/color_FFA200"
+                    app:mrb_secondaryProgressTint="@color/color_FFA200" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:text="10-10 19:35" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_hairdressing_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="[洗剪吹]"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/photo_recycle"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_user_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="很漂亮!强烈推荐!"
+                android:textColor="@color/alpha_95_black"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_reply"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_reply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <com.yiyue.store.widget.ContainsEmojiEditText
+                        android:id="@+id/et_reply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/reply_box"
+                        android:hint="请输入您的回复"
+                        android:imeOptions="actionSend"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:lineSpacingMultiplier="1.2"
+                        android:maxLength="200"
+                        android:textColor="@color/text_color4"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_send"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="发送" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/login_bg" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

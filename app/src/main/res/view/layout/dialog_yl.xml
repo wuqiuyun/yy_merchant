@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/dialog_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_prompt"
+            android:background="@drawable/dialog_yl_bg">
+            <!--标题-->
+            <FrameLayout
+                android:id="@+id/fl_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_title_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+            </FrameLayout>
+            <!--message-->
+
+            <FrameLayout
+                android:id="@+id/fl_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl_title"
+                android:layout_marginTop="@dimen/dp_16">
+                <!--正常消息，包括message ，sub message-->
+
+                <!--可编辑模块 16+24=42 UI设计距离底部42dp-->
+                <RelativeLayout
+                    android:id="@+id/rl_editable"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/shape_bg_efefef"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_input"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:textColor="@color/color_343434"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <EditText
+                            android:id="@+id/et_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/sp_14"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/dp_6"
+                        android:paddingLeft="@dimen/dp_40"
+                        android:paddingRight="@dimen/dp_40"
+                        android:textColor="@color/color_343434"
+                        android:textSize="@dimen/sp_16"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_sub_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/dp_6"
+                        android:paddingLeft="@dimen/dp_40"
+                        android:paddingRight="@dimen/dp_40"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/sp_14"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <!--多条消息，消息类表-->
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@null"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl_message"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/view_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="24dp"
+                    android:visibility="gone"
+                    android:background="@color/color_CCCCCC"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/negativeButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColor="@color/color_007AFF"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="gone"/>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_CCCCCC"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/positiveButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColor="@color/color_007AFF"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/neutralButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/dialog_yl_positive_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_prompt"
+            android:layout_width="136dp"
+            android:layout_height="113dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-52dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

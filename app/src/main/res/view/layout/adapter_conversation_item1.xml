@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/list_itease_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_62"
+            android:background="#fff"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/conv_avatar_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <com.yl.core.widget.CircleImageView
+                    android:id="@+id/conv_iv_head"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/im_avatar" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/conv_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_marginRight="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_toRightOf="@+id/conv_avatar_container"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/color_424242"
+                android:textSize="@dimen/sp_16"
+                tools:text="马云马云马云马云马云马马云马云马云马云马云马云云马云马云马云马云马云马云" />
+
+            <ImageView
+                android:id="@+id/conv_iv_crown"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toRightOf="@+id/conv_tv_name"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/conv_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/sp_13"
+                tools:text="12:00" />
+
+
+            <TableRow
+                android:id="@+id/conv_layout_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/conv_tv_name"
+                android:layout_toRightOf="@+id/conv_avatar_container"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_7">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/conv_tv_content_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="16条"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="]"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/conv_tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dp_60"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="马云马云马云马云马云马马云马云马云马云马云马云云马云马云马云马云马云马云" />
+            </TableRow>
+
+            <RelativeLayout
+                android:id="@+id/conv_layout_unread_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/conv_tv_time"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/im_red_circle_bg">
+
+                <TextView
+                    android:id="@+id/conv_tv_unread_icon"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="2" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_eee" />
+    </LinearLayout>
+</layout>

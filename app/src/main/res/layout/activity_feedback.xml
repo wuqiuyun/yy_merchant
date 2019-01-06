@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/experience_feedback" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/login_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_220"
+                    android:background="@drawable/shape_edit_bg_white"
+                    android:gravity="top|left"
+                    android:textSize="@dimen/sp_14"
+                    android:maxLength="200"
+                    android:textColor="@color/alpha_95_black"/>
+                <TextView
+                    android:id="@+id/tv_edit_hint"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback_hint"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/hint_text"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:background="@color/alpha_95_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_current_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/hint_text"/>
+
+                <TextView
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/200"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/hint_text"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Customer_service"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/text_color"/>
+
+                <TextView
+                    android:onClick="@{click.onClick}"
+                    android:id="@+id/tv_service_phone"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_phone"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/text_color2"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:onClick="@{click.onClick}"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:text="@string/submit"
+                android:background="@drawable/shape_btn"
+                android:gravity="center"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/alpha_95_white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

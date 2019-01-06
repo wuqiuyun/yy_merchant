@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yiyue.store">
+
+    <application
+        android:name="com.yiyue.store._YLApplication"
+        tools:replace="android:name">
+        <activity
+            android:name=".module.DebugTestMainActivity"
+            android:alwaysRetainTaskState="false"
+            android:theme="@style/FullScreen.AppTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.yiyue.store.module.splash._SplashActivity"
+            android:theme="@style/Splash.FullScreen.AppTheme"/>
+
+        <activity
+            android:name="com.yiyue.store.module.splash.SplashActivity"
+            tools:node="merge">
+            <intent-filter tools:node="remove">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

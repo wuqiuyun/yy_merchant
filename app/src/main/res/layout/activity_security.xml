@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/account_security"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/login_bg">
+
+            <RelativeLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/rl_modify_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_phone"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/alpha_95_black"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_version_code"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="188****8888"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/login_text"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/rl_modify_password"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_password"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/alpha_95_black"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/rl_binding_wx"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/binding_wx"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/alpha_95_black"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_binding_wx"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_right3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未绑定"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/login_text"/>
+                <ImageView
+                    android:id="@+id/iv_right3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/rl_binding_bank"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/binding_bank"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/alpha_95_black"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/rl_binding_zfb"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/binding_zfb"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/alpha_95_black"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

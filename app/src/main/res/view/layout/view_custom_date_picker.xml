@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_date_pv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@color/alpha_60_black"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_date_pv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="确定"
+            android:textColor="@color/alpha_60_black"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp">
+
+            <com.yiyue.store.widget.mytimepickview.MyTimePickerView
+                android:id="@+id/year_pv"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1" />
+
+            <com.yiyue.store.widget.mytimepickview.MyTimePickerView
+                android:id="@+id/month_pv"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1" />
+
+            <com.yiyue.store.widget.mytimepickview.MyTimePickerView
+                android:id="@+id/day_pv"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--门店总计-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/alpha_95_white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/layout_line" />
+        <RelativeLayout
+            android:paddingRight="@dimen/dp_30"
+            android:paddingLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.yl.core.widget.CircleImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/civ_head_photo"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:src="@drawable/meizi" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="wrap_content"
+                        android:text="艾米"
+                        android:textColor="@color/color_343434"
+                        android:textSize="@dimen/sp_14"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                    <TextView
+                        android:id="@+id/tv_nexus"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="wrap_content"
+                        android:text="店内美发师"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_11"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_complete_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/order_number"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/RMB"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

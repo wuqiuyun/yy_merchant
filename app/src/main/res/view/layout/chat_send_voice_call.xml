@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_3"
+        tools:text="2018.11.17" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/ic_user"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/im_avatar" />
+
+        <LinearLayout
+            android:id="@+id/layout_voice_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toLeftOf="@+id/ic_user"
+            android:background="@drawable/right_chat"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_6"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_18"
+            android:paddingTop="@dimen/dp_6">
+
+            <ImageView
+                android:id="@+id/chat_iv_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/im_chat_voice_call_self" />
+
+            <TextView
+                android:id="@+id/chat_tv_voice_callmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="对方不在线"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

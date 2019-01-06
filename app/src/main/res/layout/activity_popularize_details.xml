@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.yl.technician.module.mine.pplarz.details.PopularizeDetailsActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorColor="#F46B45"
+            app:tabSelectedTextColor="#F46B45"
+            app:tabBackground="@android:color/transparent"
+            app:tabRippleColor="@android:color/transparent" />
+
+        <com.yiyue.store.widget.viewpage.CustomViewPager
+            android:id="@+id/view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 标题 -->
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_alignParentTop="true"
+            app:title_text="@string/label_title_stylist"
+            android:layout_width="match_parent"
+            app:right_icon="@drawable/icon_search"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:layout_below="@id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fl_content"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_below="@id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <View
+                android:visibility="gone"
+                android:id="@+id/v_bg"
+                android:layout_width="match_parent"
+                android:background="@color/dark_gray"
+                android:alpha="0.4"
+                android:layout_height="match_parent"/>
+            <com.yiyue.store.widget.filter.FilterView
+                android:id="@+id/view_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.yiyue.store.widget.filter.FilterView>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="@color/colorPrimary" />
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="true"
+            app:title_text="@string/label_title_mall" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mall_not"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="即将上线,敬请期待!"
+            android:textColor="@color/text_color6"
+            android:textSize="@dimen/sp_18"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:lineSpacingExtra="@dimen/dp_1_5"
+            android:text="@string/mall_hint"
+            android:textColor="@color/text_color"/>
+    </LinearLayout>
+</layout>

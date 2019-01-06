@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ImageView
+        android:id="@+id/iv_store"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/dp_35"
+        android:scaleType="centerCrop"
+        android:layout_height="@dimen/dp_35"
+        android:background="@color/dark_gray">
+
+    </ImageView>
+</layout>

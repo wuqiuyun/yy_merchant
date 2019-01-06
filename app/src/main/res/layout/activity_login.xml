@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <ScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:visibility="invisible"
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_17"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:onClick="@{click.onClick}"
+            android:src="@drawable/out" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_22" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_hint1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_agreement"
+                    android:onClick="@{click.onClick}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_hint2"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <!--手机验证码登录-->
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_login_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_80"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/EditTextDefultStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:hint="@string/login_phone"
+                        android:textSize="@dimen/sp_16"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/dp_50"
+                        android:maxLength="11"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+86"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_code"
+                        style="@style/EditTextDefultStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:hint="@string/login_code"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp_16"
+                        android:paddingRight="@dimen/dp_120"
+                        android:inputType="number"
+                        android:paddingLeft="13dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:maxLength="6"/>
+                    <TextView
+                        android:id="@+id/tv_get_code"
+                        android:onClick="@{click.onClick}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_50"
+                        android:text="@string/login_get_code"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/text_color6"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/dp_10"/>
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line"/>
+
+            </LinearLayout>
+
+            <!--账号密码登录-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_account_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_80"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_account"
+                        style="@style/EditTextDefultStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:hint="@string/account"
+                        android:textSize="@dimen/sp_16"
+                        android:maxLines="1"
+                        android:maxLength="11"
+                        android:inputType="phone"/>
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        style="@style/EditTextDefultStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:hint="@string/password"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp_16"
+                        android:paddingRight="@dimen/dp_120"
+                        android:inputType="textPassword"
+                        android:maxLength="20"/>
+                    <TextView
+                        android:id="@+id/tv_forget_password"
+                        android:onClick="@{click.onClick}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_50"
+                        android:text="@string/forget_password"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/text_color2"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_10"/>
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_60"
+                android:background="@drawable/shape_btn_bg"
+                android:onClick="@{click.onClick}"
+                android:text="@string/login2"
+                android:textColor="@color/alpha_95_white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_switch"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{click.onClick}"
+                android:text="@string/use_password_login"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color2"
+                android:textSize="@dimen/sp_14"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="@dimen/dp_3"/>
+
+            <!--使用微信登录-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_80">
+
+                <View
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_0_3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/login_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/hint"
+                    android:textColor="@color/login_text"
+                    android:textSize="@dimen/sp_16" />
+
+                <View
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_0_3"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/login_text" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:id="@+id/ll_weix"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_30"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <ImageView
+                    android:id="@+id/iv_weix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:onClick="@{click.onClick}"
+                    android:src="@drawable/weix" />
+                <TextView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="微信"
+                    android:textColor="@color/login_text"
+                    android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>
+

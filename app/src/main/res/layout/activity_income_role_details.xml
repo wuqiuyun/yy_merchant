@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.yl.technician.module.mine.pplarz.role.IncomeRoleDetailsActivity">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="@drawable/wallet_bg_gradient" />
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            app:title_text="推荐收益"
+            app:title_text_color="@color/white"
+            app:bg_drawable="@drawable/wallet_bg_gradient"
+            app:left_icon="@drawable/icon_arrow_back_white"
+            app:left_text_color="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_160">
+            <View
+                android:id="@+id/bg_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_120"
+                android:background="@drawable/wallet_bg_gradient"/>
+            <View
+                android:layout_below="@id/bg_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@color/color_EFEFEF"/>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/ll_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/bg_income_top">
+
+                <ImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:src="@drawable/icon_head_pic_def"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:textColor="@color/color_343434"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/iv_photo"
+                    tools:text="门店名"/>
+                <TextView
+                    android:id="@+id/tv_contact"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_alignLeft="@id/tv_name"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/dark_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="联系方式：13912345678"/>
+
+                <ImageView
+                    android:id="@+id/btn_tell"
+                    android:onClick="@{click.onClick}"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/icon_phone_nor"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@id/ll_user_info"
+                android:layout_marginTop="-10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_income_bottom">
+
+                <TextView
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/sp_13"
+                    android:text="邀请时间："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12-12 12:12"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/sp_13"
+                    android:text="总获取佣金："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_income_total"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="16800.69元"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+      <com.scwang.smartrefresh.layout.SmartRefreshLayout
+          android:id="@+id/refresh_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <com.yiyue.store.widget.stickylistview.StickyHeaderListView
+              android:id="@+id/sh_lv"
+              android:divider="@null"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"/>
+      </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

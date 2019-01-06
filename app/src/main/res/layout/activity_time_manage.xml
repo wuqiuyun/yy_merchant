@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yiyue.store.widget.TitleView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/time_manage" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/business_switch"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/alpha_95_black"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:onClick="@{click.onClick}"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_business_switch"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_switch_jine" />
+                <!--<Switch-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:id="@+id/business_switch"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:switchMinWidth="50dp"-->
+                    <!--android:background="@null"-->
+                    <!--android:track="@drawable/switch_button_selector"-->
+                    <!--android:thumb="@android:color/transparent" />-->
+
+            </RelativeLayout>
+
+            <!--服务时间-->
+            <RelativeLayout
+                android:id="@+id/rl_order_time"
+                android:onClick="@{click.onClick}"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:background="@color/alpha_95_white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/order_time"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <LinearLayout
+                    android:id="@+id/ll_order_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{click.onClick}"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_stores_business_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:00"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14" />
+                    <TextView
+                        android:id="@+id/tv_stores_business_time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="23:00"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_arrow_right" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--服务周期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:background="@color/alpha_95_white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center_vertical"
+                    android:text="@string/order_cycle"
+                    android:textColor="@color/alpha_95_black"
+                    android:textSize="@dimen/sp_14" />
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/rv_business_cycle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/dp_20"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/login_text_bg"
+            android:onClick="@{click.onClick}"
+            android:text="@string/save"
+            android:textColor="@color/alpha_75_white"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_marginStart="@dimen/dp_16"
+            android:textColor="@color/color_343434"
+            android:textSize="@dimen/sp_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12-12 12:12"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_343434"
+            android:text="推荐佣金："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_amount"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/red"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12.89元"/>
+    </LinearLayout>
+</layout>

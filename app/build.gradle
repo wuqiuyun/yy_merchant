@@ -1,0 +1,311 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.aliyun.ams.emas-services'
+
+def launchActivity = ''
+def localHost = ''
+
+task loadProperties() {
+    def proFile = file("../local.properties")
+    if (proFile != null) {
+        Properties p = new Properties()
+        proFile.withInputStream { stream ->
+            p.load(stream)
+        }
+        if (p.launchActivity) {
+            launchActivity = p.launchActivity
+        }
+        if (p.localHost) {
+            localHost = p.localHost
+        }
+    }
+}
+
+/**
+ * 初始化签名信息
+ */
+// RELEASE
+def KEY_PASSWORD = ''
+def KEYSTORE_NAME = ''
+def KEYSTORE_PASSWORD = ''
+// BETA
+def KEY_PASSWORD_BETA = ''
+def KEYSTORE_NAME_BETA = ''
+def KEYSTORE_PASSWORD_BETA = ''
+// 渠道
+def CHANNEL = ''
+
+task initKeyStore() {
+    def proFile = file('../signing.properties')
+    if (proFile != null) {
+        Properties p = new Properties()
+        proFile.withInputStream { stream ->
+            p.load(stream)
+        }
+        if (p.KEY_PASSWORD) {
+            KEY_PASSWORD = p.KEY_PASSWORD
+        }
+        if (p.KEYSTORE_NAME) {
+            KEYSTORE_NAME = p.KEYSTORE_NAME
+        }
+        if (p.KEYSTORE_PASSWORD) {
+            KEYSTORE_PASSWORD = p.KEYSTORE_PASSWORD
+        }
+        if (p.KEYSTORE_PASSWORD_BETA) {
+            KEYSTORE_PASSWORD_BETA = p.KEYSTORE_PASSWORD_BETA
+        }
+        if (p.KEY_PASSWORD_BETA) {
+            KEY_PASSWORD_BETA = p.KEY_PASSWORD_BETA
+        }
+        if (p.KEYSTORE_NAME_BETA) {
+            KEYSTORE_NAME_BETA = p.KEYSTORE_NAME_BETA
+        }
+    }
+}
+
+def time = releaseTime()
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("UTC"))
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android.ANDROID_COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.android.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        applicationId rootProject.ext.android.APPLICATIONID
+        minSdkVersion rootProject.ext.android.ANDROID_MIN_SDH_VERSION
+        targetSdkVersion rootProject.ext.android.ANDROID_TARGET_SDK_VERSION
+        versionCode rootProject.ext.version.VERSION_CODE
+        versionName rootProject.ext.version.VERSION_NAME
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        /**
+         * common
+         */
+        buildConfigField "String", "TIME", "\"${time}\""
+        buildConfigField "String", "CHANNEL", "\"${CHANNEL}\""
+        flavorDimensions 'yyl'
+        resValue("string", "app_name", "意约-商户")
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a'//, 'armeabi', 'x86', 'x86_64', 'arm64-v8a'
+        }
+        multiDexEnabled true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/fragment',
+                    'src/main/res/view'
+            ]
+        }
+        debug.setRoot('src/buildtype/debug')
+        beta.setRoot('src/buildtype/beta')
+    }
+
+
+    signingConfigs {
+        /**
+         * beta 版本的签名文件
+         */
+        beta {
+            storeFile file('../key/beta.jks')
+            storePassword KEY_PASSWORD_BETA
+            keyAlias KEYSTORE_NAME_BETA
+            keyPassword KEYSTORE_PASSWORD_BETA
+            v2SigningEnabled false
+        }
+        /**
+         * release 版本的签名文件
+         */
+        release {
+            storeFile file('../key/release.jks')
+            storePassword KEY_PASSWORD
+            keyAlias KEYSTORE_NAME
+            keyPassword KEYSTORE_PASSWORD
+            v2SigningEnabled false
+        }
+    }
+
+    /**
+     * build type 用来构建不同的变种
+     */
+    buildTypes {
+        /**
+         -debug 面向开发者
+         */
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+            resValue("string", "app_name", "门店_DEBUG")
+            buildConfigField "String", "API_HOST", "\"${localHost == '' ? rootProject.ext.host_default : localHost}\""
+            buildConfigField "String", "LaunchActivity", "\"${launchActivity}\""
+            buildConfigField "String", "WEIXIN_APPID", "\"${rootProject.ext.appkey.WEIXIN_APPID}\""
+            buildConfigField "String", "WEIXIN_SECRET", "\"${rootProject.ext.appkey.WEIXIN_SECRET}\""
+            manifestPlaceholders = [
+                    "GAODE_KEY"     : "${rootProject.ext.appkey.GAODE_KEY}",
+                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY_TEST}", //测试环信
+//                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY_PRE}",  //预发布环信
+//                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY}",      //正式环信
+                    "BaiduMobAd_KEY": "${rootProject.ext.appkey.BaiduMobAd_KEY}"
+            ]
+        }
+
+        /**
+         -beta 面向测试小伙伴
+         */
+        beta {
+            signingConfig signingConfigs.release
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_HOST", "\"${rootProject.ext.host_beta}\""
+            buildConfigField "String", "WEIXIN_APPID", "\"${rootProject.ext.appkey.WEIXIN_APPID}\""
+            buildConfigField "String", "WEIXIN_SECRET", "\"${rootProject.ext.appkey.WEIXIN_SECRET}\""
+            resValue("string", "app_name", "门店_BETA")
+            manifestPlaceholders = [
+                    "GAODE_KEY"     : "${rootProject.ext.appkey.GAODE_KEY}",
+//                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY_TEST}",//测试环信
+                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY_PRE}",//预发布环信
+//                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY}",      //正式环信
+                    "BaiduMobAd_KEY": "${rootProject.ext.appkey.BaiduMobAd_KEY}"
+            ]
+        }
+
+        /**
+         -release 面向正式用户
+         */
+        release {
+            signingConfig signingConfigs.release
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            buildConfigField "String", "API_HOST", "\"${rootProject.ext.host_release}\""
+            buildConfigField "String", "WEIXIN_APPID", "\"${rootProject.ext.appkey.WEIXIN_APPID}\""
+            buildConfigField "String", "WEIXIN_SECRET", "\"${rootProject.ext.appkey.WEIXIN_SECRET}\""
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [
+                    "GAODE_KEY"     : "${rootProject.ext.appkey.GAODE_KEY}",
+                    "EASEMOB_KEY"   : "${rootProject.ext.appkey.EASEMOB_KEY}",      //正式环信
+                    "BaiduMobAd_KEY": "${rootProject.ext.appkey.BaiduMobAd_KEY}"
+            ]
+        }
+
+    }
+
+    /**
+     * 渠道
+     */
+    productFlavors {
+        yl {}
+    }
+
+    /**
+     * 重命名apk
+     * 将apk到../output/apk
+     */
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == 'release') {
+            variant.assemble.doLast {
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('release.apk')) {
+                        def fileName = "${variant.flavorName}_v${defaultConfig.versionName}_${releaseTime()}"
+                        def outputPath = "../output/apk"
+                        copy {
+                            from outputFile
+                            into outputPath
+                            rename { fileName + ".apk" }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        quiet true
+        ignoreWarnings true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    greendao {
+        schemaVersion 1//数据库版本号    
+        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录   
+        daoPackage 'com.yiyue.store.model.local.greendao'//设置DaoMaster、DaoSession、Dao包名
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':librarys:YLCore')
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["recycleview"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["support-design"]
+    implementation rootProject.ext.dependencies["smartrefresh"]
+    implementation rootProject.ext.dependencies["rxpermissions"]
+    implementation rootProject.ext.dependencies["support-annotations"]
+    implementation rootProject.ext.dependencies["rv-adapter-helper"]
+    implementation rootProject.ext.dependencies["greendao"]
+    implementation rootProject.ext.dependencies["flowlayout"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["picker-view"]
+    implementation rootProject.ext.dependencies["alicloud-push"]
+    implementation rootProject.ext.dependencies["bolts-android"]
+    implementation rootProject.ext.dependencies["pinyin4j"]
+    implementation rootProject.ext.dependencies["album"]
+    implementation rootProject.ext.dependencies["MPAndroidChart"]
+    // 百度SDK统计
+    implementation 'com.baidu.mobstat:mtj-sdk-circle:latest.integration'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    implementation rootProject.ext.dependencies["matisse"]
+    implementation files('libs/MobCommons-2018.1011.1129.jar')
+    implementation files('libs/MobTools-2018.1009.1056.jar')
+    implementation files('libs/ShareSDK-Core-3.3.0.jar')
+    implementation files('libs/ShareSDK-QQ-3.3.0.jar')
+    implementation files('libs/ShareSDK-Wechat-3.3.0.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-3.3.0.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-3.3.0.jar')
+    // PIN密码 https://github.com/Jungerr/GridPasswordView
+    implementation rootProject.ext.dependencies["gridPasswordView"]
+    // debug
+    debugImplementation rootProject.ext.dependencies["stetho"]
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+}

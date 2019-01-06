@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+        <data>
+                <import type="com.yiyue.store.component.databind.ClickHandler"/>
+                <variable
+                    name="click"
+                    type="ClickHandler"/>
+        </data>
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".module.home.order.details.OrderDetailsActivity">
+                <com.yiyue.store.widget.TitleView
+                    android:id="@+id/title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title_text="@string/label_title_order_details"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_user_info"
+                    android:layout_below="@id/title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_bg_white"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                        <com.yl.core.widget.CircleImageView
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/iv_photo"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_width="@dimen/dp_74"
+                            android:layout_height="@dimen/dp_74" />
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/color_343434"
+                            android:drawablePadding="@dimen/dp_6"
+                            android:singleLine="true"
+                            android:maxEms="8"
+                            android:ellipsize="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_label"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/sp_16"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ll_user_info"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white">
+
+                        <!-- 服务项目 -->
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_project"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="@string/order_project"/>
+
+                        <!-- 服务门店 -->
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_store"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="服务美发师："/>
+
+                        <!-- 预约时间 -->
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_date_promise"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="原预约时间："/>
+
+                        <!-- 预约时间 -->
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_date_rese"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="@string/order_date_reservation"/>
+
+                        <!-- 开始时间 -->
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_date_start"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="@string/order_date_start"/>
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_date_stop"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="@string/order_date_stop"/>
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_id"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title_text="@string/order_id"/>
+
+                        <include layout="@layout/layout_line"/>
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:content_text_color="@color/color_red"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:title_text="订单金额："/>
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/coupon_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:content_text_color="@color/color_red"
+                            app:title_text="优惠金额：" />
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/pay_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:content_text_color="@color/color_red"
+                            app:title_text="支付金额：" />
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/clear_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:content_text_color="@color/color_red"
+                            app:title_text="预计收入：" />
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/refund_amount"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:content_text_color="@color/color_red"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:title_text="退回金额：" />
+
+                        <!-- 手续费 -->
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_handling_fee"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:content_text_color="@color/text_color6"
+                            app:content_text_sub_color="@color/text_color"
+                            app:title_text="@string/order_handling_fee" />
+
+                        <com.yiyue.store.widget.UserMenuView
+                            android:id="@+id/order_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:title_text="订单备注：" />
+                </LinearLayout>
+
+        </LinearLayout>
+
+</layout>

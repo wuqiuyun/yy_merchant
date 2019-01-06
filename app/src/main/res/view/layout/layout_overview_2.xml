@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:padding="@dimen/dp_10"
+                    android:background="@drawable/background_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现账单"/>
+                    <TextView
+                        android:id="@+id/tv_withdrawal_month"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/withdrawal_month"/>
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                    <TextView
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:text="暂无提现记录"
+                        android:id="@+id/v_nodata"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_100"/>
+                </FrameLayout>
+
+                <TableRow
+                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_bank_detils"
+                        android:padding="@dimen/dp_10"
+                        android:gravity="right"
+                        android:textColor="@color/color_FF8C40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_see_details2"/>
+                </TableRow>
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

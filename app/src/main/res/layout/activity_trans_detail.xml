@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/transfer_detail_name" />
+
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_view"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/rp_open_rp_top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_red_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/words_numal"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/default_useravatar" />
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_16"
+                tools:text="昵称" />
+
+            <TextView
+                android:id="@+id/tv_rp_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_nick"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_14"
+                tools:text="ID:123445" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rp_id"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:id="@+id/layout_red_sending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_money_self"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_6"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:text="@string/rp_havenot_trans_receive"
+                        android:textColor="@color/color_999999" />
+
+                    <include layout="@layout/layout_line_eee" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_red_had"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_rp_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="bottom"
+                            android:maxLines="1"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/sp_28"
+                            tools:text="100" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/tv_rp_money"
+                            android:text="@string/money_size"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_rp_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_money"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:textColor="@color/color_red"
+                        android:textSize="@dimen/sp_14"
+                        tools:text="@string/transfer_had_receive" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_watch_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_6"
+                android:text="@string/transfer_records"
+                android:textColor="@color/text_color5" />
+
+            <TextView
+                android:id="@+id/tv_bottom_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_watch_history"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:gravity="center"
+                android:text="@string/transfer_no_grab_tip"
+                android:textColor="@color/color_a0a0a0"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

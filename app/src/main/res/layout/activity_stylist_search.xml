@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4F4F4"
+        android:orientation="vertical"
+        tools:context=".module.im.imsearch.ImSearchActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="false"
+            app:title_text="@string/ims_search" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/search_bg"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/ims_iv_search"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_centerVertical="true"
+                android:src="@drawable/im_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_toRightOf="@+id/ims_iv_search"
+                android:background="@null"
+                android:hint="请输入美发师名"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_stylist_search"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+    </LinearLayout>
+</layout>

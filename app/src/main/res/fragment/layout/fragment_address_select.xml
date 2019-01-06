@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- search -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:background="@color/color_F7F7F7">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_bg_white_10"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:scaleType="centerInside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_search_gray"/>
+
+                <EditText
+                    android:id="@+id/et_keyword"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:hint="@string/search_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:textColor="@color/color_343434"
+                    android:textColorHint="@color/dark_gray"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:onClick="@{click.onClick}"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/cancel"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- map -->
+            <RelativeLayout
+                android:id="@+id/rl_map"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_240">
+                <!-- 地图层 -->
+                <com.yl.core.component.map.view.YLMap
+                    android:id="@+id/map_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <!--辅助居中定位点-->
+                <com.yiyue.store.widget.map.MapMarkerView
+                    android:id="@+id/mv_location"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- -->
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:onClick="@{click.onClick}"
+                    android:src="@drawable/map_marker"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <!-- address -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/select_addr_list"
+                android:layout_below="@id/rl_map"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!-- search address -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/search_addr_list"
+                android:background="#55000000"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>
+

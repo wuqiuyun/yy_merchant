@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/wallet_description" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30">
+
+                <TextView
+                    android:lineSpacingExtra="@dimen/dp_1_2"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_description2"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/alpha_95_black"/>
+
+                <TextView
+                    android:lineSpacingExtra="@dimen/dp_1_2"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_description3"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/alpha_95_black"/>
+                <TextView
+                    android:lineSpacingExtra="@dimen/dp_1_2"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_description4"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/alpha_95_black"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+</layout>

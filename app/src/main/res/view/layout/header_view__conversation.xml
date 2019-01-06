@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_12">
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/iv_notice"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/comm_notice_nor" />
+
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_toRightOf="@+id/iv_notice"
+                android:text="@string/notice" />
+
+            <RelativeLayout
+                android:id="@+id/layout_notice_red_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/im_red_circle_bg"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_notice_icon"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/color_eee" />
+
+        <RelativeLayout
+            android:id="@+id/layout_system_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_12">
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/iv_system_notice"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/comm_system_nor" />
+
+            <TextView
+                android:id="@+id/tv_system_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_toRightOf="@+id/iv_system_notice"
+                android:text="@string/system_notice" />
+
+            <RelativeLayout
+                android:id="@+id/layout_system_notice_red_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/im_red_circle_bg"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_system_notice_icon"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/color_eee" />
+    </LinearLayout>
+</layout>

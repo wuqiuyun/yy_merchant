@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_95_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/banding_referees" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_binding_referes">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:background="@drawable/frame_middle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:src="@drawable/invite_rule"/>
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_100">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="现在填写朋友圈的推荐，可获得"/>
+                    <TextView
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/color_FF7F50"
+                        android:id="@+id/tv_invite_reward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="50积分"/>
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="奖励哦"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_14"
+                    android:text="对方也可获得奖励"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_120"/>
+
+                <LinearLayout
+                    android:layout_marginStart="@dimen/dp_60"
+                    android:layout_marginEnd="@dimen/dp_60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/et_invite_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="点击输入邀请码"
+                        android:gravity="center"
+                        android:textSize="@dimen/sp_16"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/color_343434"
+                        android:textColorHint="@color/dark_gray"
+                        android:background="@null" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2"
+                        android:background="#80FF7F50"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_commit"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp_26"
+                    android:background="@drawable/shape_bg_ff6600_25"
+                    android:onClick="@{click.onClick}"
+                    android:text="@string/commit"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/alpha_95_white" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".module.mine.works.details.WorksDetailsActivity">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            app:title_text="@string/label_works_details"
+            app:right_icon="@drawable/icon_share"
+            app:right_icon_sub="@drawable/icon_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.yiyue.store.widget.viewpage.CustomViewPager
+            android:id="@+id/view_page"
+            android:layout_below="@id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#50000000"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            android:layout_alignParentBottom="true">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_page_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/white"
+                    android:text="0/0"/>
+                <View android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_collection_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="0"
+                        android:textSize="@dimen/sp_10"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        android:text="@string/common_collection"/>
+                </LinearLayout>
+
+                <View android:layout_width="@dimen/dp_1"
+                      android:layout_height="@dimen/dp_10"
+                      android:layout_marginLeft="@dimen/dp_10"
+                      android:layout_marginRight="@dimen/dp_10"
+                      android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_forward_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="0"
+                        android:textSize="@dimen/sp_10"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        android:text="@string/common_forward"/>
+                </LinearLayout>
+
+                <View android:layout_width="@dimen/dp_1"
+                      android:layout_height="@dimen/dp_10"
+                      android:layout_marginLeft="@dimen/dp_10"
+                      android:layout_marginRight="@dimen/dp_10"
+                      android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_look_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="0"
+                        android:textSize="@dimen/sp_10"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        android:text="@string/common_look"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/sp_10"
+                android:textColor="@color/white"/>
+            <!--android:text="2018年流行的发型有很多，其中一种是蛋卷烫，只要在发尾中的小卷的烫发处理，这样的发型蓬松感十足，超显脸小，脸大的妹子赶紧收藏起来。"-->
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

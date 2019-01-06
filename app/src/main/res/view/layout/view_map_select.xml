@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <LinearLayout
+            android:id="@+id/ll_map_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_botton_dialog_white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_gaode"
+                style="@style/RippleBtnTheme"
+                android:onClick="@{click.onClick}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:visibility="gone"
+                android:text="高德地图"
+                android:textColor="@color/alpha_95_black"
+                android:textSize="@dimen/sp_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@color/login_bg" />
+
+            <TextView
+                android:id="@+id/tv_baidu"
+                style="@style/RippleBtnTheme"
+                android:visibility="gone"
+                android:onClick="@{click.onClick}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="百度地图"
+                android:textColor="@color/alpha_95_black"
+                android:textSize="@dimen/sp_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@color/login_bg" />
+
+            <TextView
+                android:id="@+id/tv_tengxun"
+                style="@style/RippleBtnTheme"
+                android:visibility="gone"
+                android:onClick="@{click.onClick}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="腾讯地图"
+                android:textColor="@color/alpha_95_black"
+                android:textSize="@dimen/sp_18" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:onClick="@{click.onClick}"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/shape_botton_dialog_white"
+            android:text="@string/cancel"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/text_color5"/>
+
+    </LinearLayout>
+</layout>

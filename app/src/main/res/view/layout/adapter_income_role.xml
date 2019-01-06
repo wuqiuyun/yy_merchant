@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_343434"
+            android:textSize="@dimen/sp_16"
+            tools:text="门店名"/>
+
+        <!-- 收益 -->
+        <LinearLayout
+            android:layout_alignTop="@id/tv_name"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_343434"
+                android:text="总获取佣金:"/>
+            <TextView
+                android:id="@+id/tv_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_16"
+                tools:text="1289.89元"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_alignStart="@id/tv_name"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_below="@id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/sp_12"
+            tools:text="联系方式:0755-1234-5678"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_alignStart="@id/tv_name"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_below="@id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/sp_12"
+            tools:text="邀请时间:12-21 12:12"/>
+
+        <View
+            android:layout_below="@id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_height="@dimen/dp_0_3"
+            android:background="@color/color_CCCCCC"/>
+    </RelativeLayout>
+</layout>

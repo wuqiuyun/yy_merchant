@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="false"
+            app:right_text="@string/fi_remake_save"
+            app:title_text="@string/fi_set_remake" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+
+            <TextView
+                android:id="@+id/af_tv_tablename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text="@string/fi_set_remake"
+                android:textColor="@color/color_999999" />
+
+            <com.yiyue.store.widget.LineEditText
+                android:id="@+id/af_edit"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

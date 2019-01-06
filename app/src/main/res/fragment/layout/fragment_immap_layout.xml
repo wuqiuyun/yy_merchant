@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            app:title_text="@string/im_map"
+            app:right_text="@string/im_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 地图层 -->
+            <com.yl.core.component.map.view.YLMap
+                android:id="@+id/map_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--辅助居中定位点-->
+            <com.yiyue.store.widget.map.MapMarkerView
+                android:id="@+id/mv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

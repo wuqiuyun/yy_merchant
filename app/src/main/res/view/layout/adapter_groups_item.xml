@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:background="?android:attr/selectableItemBackground">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:contentDescription="avatar"
+            android:src="@drawable/im_avatar" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_toRightOf="@+id/iv_avatar"
+            tools:text="Gjiazhe"
+            android:textColor="@color/color_424242"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/iv_owner"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_toRightOf="@+id/tv_name"
+            android:contentDescription="avatar"
+            android:src="@drawable/send_friends" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_eee"/>
+</LinearLayout>
+

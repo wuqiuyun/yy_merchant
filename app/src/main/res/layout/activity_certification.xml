@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yiyue.store.widget.TitleView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isHome="true"
+                app:title_text="@string/status_certification" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/login_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/text_bg"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="@dimen/dp_5"
+                        android:paddingTop="@dimen/dp_5"
+                        android:text="@string/certification"
+                        android:textColor="@color/alpha_95_white"
+                        android:textSize="@dimen/sp_12" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--真实姓名-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:background="@color/alpha_95_white"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10">
+
+                            <TextView
+                                android:id="@+id/tv_real_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/real_name"
+                                android:textColor="@color/alpha_95_black"
+                                android:textSize="@dimen/sp_14" />
+
+                            <EditText
+                                android:id="@+id/et_real_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:layout_toRightOf="@id/tv_real_name"
+                                android:background="@drawable/edittext_bg_white"
+                                android:gravity="right"
+                                android:hint="@string/hint_real_name"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/sp_14" />
+
+                        </RelativeLayout>
+
+                        <!--证件号码-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_1"
+                            android:background="@color/alpha_95_white"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10">
+
+                            <TextView
+                                android:id="@+id/tv_id_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/id_number"
+                                android:textColor="@color/alpha_95_black"
+                                android:textSize="@dimen/sp_14" />
+
+                            <EditText
+                                android:id="@+id/et_id_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:layout_toRightOf="@id/tv_id_number"
+                                android:background="@drawable/edittext_bg_white"
+                                android:digits="0123456789Xx"
+                                android:gravity="right"
+                                android:hint="@string/hint_id_number"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/sp_14" />
+
+                        </RelativeLayout>
+
+                        <!--证书编号-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_1"
+                            android:background="@color/alpha_95_white"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10">
+
+                            <TextView
+                                android:id="@+id/tv_certificate_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/certificate_number"
+                                android:textColor="@color/alpha_95_black"
+                                android:textSize="@dimen/sp_14" />
+
+                            <EditText
+                                android:id="@+id/et_certificate_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:layout_toRightOf="@id/tv_certificate_number"
+                                android:background="@drawable/edittext_bg_white"
+                                android:gravity="right"
+                                android:hint="@string/hint_certificate_number"
+                                android:inputType="text"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/sp_14" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@color/alpha_95_white"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dp_30"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_20">
+
+                            <!--上传营业执照-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/update_license"
+                                        android:textColor="@color/alpha_95_black"
+                                        android:textSize="@dimen/sp_14" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:text="@string/update_hint"
+                                        android:textColor="@color/login_text"
+                                        android:textSize="@dimen/sp_12" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_update_license"
+                                    android:layout_width="@dimen/dp_160"
+                                    android:layout_height="@dimen/dp_95"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/up_photo"
+                                    android:onClick="@{click.onClick}" />
+
+                            </RelativeLayout>
+
+                            <!--上传门店封面-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/update_stores_cover"
+                                        android:textColor="@color/alpha_95_black"
+                                        android:textSize="@dimen/sp_14" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:text="@string/update_hint"
+                                        android:textColor="@color/login_text"
+                                        android:textSize="@dimen/sp_12" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_update_cover"
+                                    android:layout_width="@dimen/dp_160"
+                                    android:layout_height="@dimen/dp_95"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/up_photo"
+                                    android:onClick="@{click.onClick}" />
+
+
+                            </RelativeLayout>
+
+                            <!--上传门店照片-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_marginTop="48dp"
+                                        android:text="@string/update_stores_photo"
+                                        android:textColor="@color/alpha_95_black"
+                                        android:textSize="@dimen/sp_14" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:text="@string/hint_stores_photo"
+                                        android:textColor="@color/login_text"
+                                        android:textSize="@dimen/sp_12" />
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_160"
+                                    android:layout_height="@dimen/dp_96"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/up_photo">
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:overScrollMode="never"
+                                        android:paddingLeft="@dimen/dp_5"
+                                        android:paddingRight="@dimen/dp_5"
+                                        android:paddingTop="@dimen/dp_10" />
+
+                                    <View
+                                        android:id="@+id/view_add_store"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/transparent"
+                                        android:onClick="@{click.onClick}" />
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <!--手持身份照-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/update_hand_idcard_photo"
+                                        android:textColor="@color/alpha_95_black"
+                                        android:textSize="@dimen/sp_14" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:text="@string/hint_hand_idcard_photo"
+                                        android:textColor="@color/login_text"
+                                        android:textSize="@dimen/sp_12" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_hand_idcard_photo"
+                                    android:layout_width="@dimen/dp_160"
+                                    android:layout_height="@dimen/dp_95"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/up_photo"
+                                    android:onClick="@{click.onClick}" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80" />
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/login_text_bg"
+            android:onClick="@{click.onClick}"
+            android:text="@string/next"
+            android:textColor="@color/alpha_75_white"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</layout>

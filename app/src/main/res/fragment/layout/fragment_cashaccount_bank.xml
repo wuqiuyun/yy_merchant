@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_EFEFEF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_save">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bankcard_add"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:onClick="@{click.onClick}"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_btn_addbank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45">
+            <ImageView
+                android:layout_marginLeft="-5dp"
+                android:src="@drawable/im_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="@dimen/dp_0_5"
+                android:id="@+id/bt_bankcard_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加银行卡"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</layout>

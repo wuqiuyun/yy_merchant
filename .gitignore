@@ -1,0 +1,12 @@
+# app
+*.iml
+.gradle/
+.idea/
+build/
+app/build/
+local.properties
+output/apk/
+
+# librarys
+ibrarys/pickerview/build/
+app/src/main/java/com/yiyue/store/model/local/greendao/

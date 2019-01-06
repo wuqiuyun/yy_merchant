@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/v_arrow"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_et"
+        android:divider="@color/color_999999"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dp_10"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/group_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/im_pen"
+            android:drawablePadding="@dimen/dp_10"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:text="@string/gi_report" />
+
+        <TextView
+            android:id="@+id/group_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/im_pen"
+            android:drawablePadding="@dimen/dp_10"
+            android:padding="5dp"
+            android:text="@string/gi_exit" />
+
+    </LinearLayout>
+</LinearLayout>

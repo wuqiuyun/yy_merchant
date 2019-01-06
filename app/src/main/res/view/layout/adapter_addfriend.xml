@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/im_shape_sysmsg"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+    <RelativeLayout
+        android:id="@+id/af_layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_59"
+        android:background="#fff"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/af_avatar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true">
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/af_avatar"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_centerVertical="true"
+                android:src="@drawable/im_avatar" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/af_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/af_avatar_container"
+            android:textColor="@color/color_3C3C3C"
+            android:textSize="@dimen/sp_16"
+            tools:text="测试" />
+
+        <TextView
+            android:id="@+id/af_tv_nul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_7"
+            android:layout_marginTop="@dimen/dp_6"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/sp_13"
+            tools:text="nul" />
+
+        <TextView
+            android:id="@+id/af_tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/af_tv_addfriend"
+            android:layout_toRightOf="@id/af_avatar_container"
+            android:ellipsize="end"
+            android:padding="@dimen/dp_7"
+            android:singleLine="true"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/sp_14"
+            tools:text="描述" />
+
+        <TextView
+            android:id="@+id/af_tv_addfriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/af_tv_nul"
+            android:background="@drawable/shape_add_friend_btn"
+            android:paddingBottom="@dimen/dp_3"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_3"
+            android:text="@string/ims_add_friend"
+            android:textColor="@color/color_FFB848"
+            android:textSize="@dimen/sp_12"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_below="@+id/af_layout_item"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/color_eee" />
+</RelativeLayout>

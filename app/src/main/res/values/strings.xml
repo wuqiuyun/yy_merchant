@@ -1,0 +1,500 @@
+<resources>
+    <!-- label -->
+    <string name="label_title_mall">商城</string>
+    <string name="label_title_home">首页</string>
+    <string name="label_title_msg">交流</string>
+    <string name="label_title_mine">我的</string>
+    <string name="label_title_confirm">待确认</string>
+    <string name="label_title_service">待核销</string>
+    <string name="label_title_refund">已退款</string>
+    <string name="label_title_complete">已完成</string>
+    <string name="label_title_stylist">美发师</string>
+    <string name="label_title_store">门店</string>
+    <string name="label_title_works">作品</string>
+    <string name="label_comment_manager">评价管理</string>
+    <string name="label_time_manager">时间管理</string>
+    <string name="label_store_manager">门店管理</string>
+    <string name="home_stylist_invite">邀请美发师</string>
+    <string name="label_mine_stylist">我的美发师</string>
+    <string name="home_order_statistics">订单统计</string>
+    <string name="home_order_manager">预约管理</string>
+    <string name="label_title_order_details">订单详情</string>
+    <string name="label_mine_orders">我的订单</string>
+    <string name="label_works_details">作品详情</string>
+
+
+    <!--通用-->
+    <string name="ok">确 定</string>
+    <string name="determine">确定</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="skip">跳过</string>
+    <string name="commit">提 交</string>
+    <string name="next">下一步</string>
+    <string name="save">保 存</string>
+    <string name="phone">电话</string>
+    <string name="message">消息</string>
+    <string name="submit">提交</string>
+    <string name="binding">绑定</string>
+    <string name="all">全部</string>
+    <string name="description">说明</string>
+    <string name="advisory">咨询</string>
+    <string name="common_forward">转发</string>
+    <string name="common_look">查看</string>
+    <string name="common_collection">收藏</string>
+    <string name="common_filter">筛选</string>
+    <string name="common_integrate_sort">综合排序</string>
+    <string name="common_nearby">附近</string>
+    <string name="common_add">添加</string>
+    <string name="common_version">v%s</string>
+    <string name="no_data">暂无数据</string>
+    <string name="decimal_places_2">%.2f</string>
+    <!--titleview-->
+
+    <string name="exit">再按一次退出程序</string>
+
+    <!--登录-->
+    <string name="login_phone">输入手机号</string>
+    <string name="login_phone2">请输入手机号</string>
+    <string name="login_code">输入验证码</string>
+    <string name="login_get_code">获取验证码</string>
+    <string name="login_get_code_time">%s\s</string>
+    <string name="login_get_again">重新获取</string>
+    <string name="login_forget">忘记密码?</string>
+    <string name="account">输入账号</string>
+    <string name="password">输入登录密码</string>
+    <string name="login2">登 录</string>
+    <string name="hint">使用第三方账号登录</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="forget_password2">忘记密码</string>
+    <string name="login_phone_code">请输入手机验证码</string>
+    <string name="set_password">请输入设置密码</string>
+    <string name="next_password">请重新输入一遍密码</string>
+    <string name="hi">Hi~意约!&#8195;登录</string>
+    <string name="login_hint1">登录即注册表示同意</string>
+    <string name="login_hint2">用户协议、隐私条款</string>
+    <string name="use_password_login">用账号密码登录</string>
+    <string name="use_Verification_login">用短信验证码登录</string>
+
+
+    <!--注册成功 邀请码相关-->
+    <string name="invite_message">现在填写朋友的推荐码,可获得</string>
+    <string name="invite_input">选填</string>
+    <string name="invite">注册成功</string>
+    <string name="invite_yeah">感谢您选择意约,</string>
+    <string name="rmb">0元</string>
+    <string name="invite_yeah3">现金已存入您的意约钱包</string>
+    <string name="recommended_reward">恭喜您！</string>
+    <string name="invite_reward">邀请码：</string>
+    <string name="invite_reward_des">邀请好友注册永久收益，好友获得%s美发大礼包（详情请扫描上面二维码查看）</string>
+
+    <string name="invite_finish">已放入您的意约钱包</string>
+    <string name="token">%s</string>
+    <string name="reward">哦</string>
+    <string name="reward2">现在填写朋友的推荐码,可获得50%s奖励哦,对方也可获得奖励</string>
+    <string name="up_head_photo">上传头像</string>
+    <string name="user_gender">用户性别</string>
+    <string name="login_password2">登录密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="hint_login_password2">请设置账号登录密码</string>
+    <string name="hint_confirm_password">请再次输入登录密码进行确认</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+
+
+    <!-- manifest -->
+    <string name="permissions_location">请检查点位权限是否开启</string>
+    <string name="permissions_phone_state">您拒绝了获取手机状态信息权限</string>
+
+    <!--认证-->
+    <string name="certification">作为门店负责人,需要对你的身份进行认证</string>
+    <string name="real_name">真实姓名</string>
+    <string name="hint_real_name">请输入真实姓名</string>
+    <string name="id_number">证件号码 (身份证)</string>
+    <string name="hint_id_number">请输入证件号码</string>
+    <string name="certificate_number">营业执照证书编号</string>
+    <string name="hint_certificate_number">请输入证件编号</string>
+    <string name="update_license">上传营业执照</string>
+    <string name="update_hint">此照片将展示在APP首页中</string>
+    <string name="update_stores_photo">上传门店照片</string>
+    <string name="update_stores_cover">上传门店封面</string>
+    <string name="hint_stores_photo">上传门店的环境照,限量8张</string>
+    <string name="update_hand_idcard_photo">上传手持身份证照</string>
+    <string name="hint_hand_idcard_photo">上传本人手持身份证照片</string>
+    <string name="agree_agreement">已阅读并同意此协议</string>
+    <string name="perfect_information">完善资料</string>
+    <string name="status_certification">身份认证</string>
+    <string name="image_select_title_store">环境展示图</string>
+    <string name="image_select_number">(至少1张，最多%s张)</string>
+
+    <!--协议-->
+    <string name="agreement">协议</string>
+    <string name="agreement_title">《服务平台门店服务协议》</string>
+    <string name="agreement_content01">&#8195;&#8195;欢迎使用深圳市意约网络科技有限公司（下称意约公司）负责运营的意约美发服务APP应用软件平台（下称意约平台）提供的服务。请用户在注册前仔细阅读《意约平台用户服务协议》（下称本协议）中的全部内容。如用户不同意本协议任意内容，请不要注册或使用意约平台服务。如用户通过进入注册程序并勾选“我已阅读并同意意约平台用户服务协议”，即表示用户与意约公司就意约平台已达成协议，自愿接受本协议的所有内容。此后，用户不得以未阅读本协议内容为由拒绝履行或遵守本协议条款。意约公司有权对本协议条款进行修改，修改后的协议一旦公布即有效代替原来的协议，用户可随时查阅最新协议。</string>
+    <string name="agreement_content02">&#8195;&#8195;1、在申请意约平台帐号时，用户应当向意约平台提供最新、详细及真实准确的个人注册信息。前述个人注册信息包括：用户的意约平台手机号、密码及注册意约平台帐号（或补充、更新帐号信息时）输入的其他所有信息。用户在此承诺：如果用户提供的注册资料不合法、不真实、不准确、不详尽的，用户需承担因此引起的相应责任及后果，并且意约公司保留终止用户使用意约平台各项服务的权利。</string>
+    <string name="agreement_content03">&#8195;&#8195;2、意约平台的产品和服务的具体内容是通过意约美发服务APP应用软件平台为用户提供合作门店信息、门店点评信息、发型及产品价格信息、美发优惠信息、在线预约线下美发服务、在线充值在线支付、在线点评、等网络服务。</string>
+    <string name="agreement_content04">&#8195;&#8195;3、通过意约平台预约的线下美发服务及有关服务或产品的资费标准、收费方式或其他有关资费的信息，意约平台不干涉定意约平台线下美发服务或产品的资费标准和收费方式，门店必须在平台上作出明确标明与说明。不得出现虚假、不真实、不准确的服务如与，门店自行处理与客户订单，鉴于意约平台与线下提供美发服务的合作发型师或/及合作美发门店为各自相互独立的法律主体，是商业合作关系，并非系劳动或劳务关系，用户在接受预约的线下美发服务过程中出现的下列情况，意约平台或/及意约公司或/及关联公司不承担任何责任：（1）门店发型师在提供服务过程中，误伤用户的头发、头皮或其身体其他部位所引起索赔或其他侵权纠纷的；（2）门店发型师或其他第三方在提供服务过程中，与用户发生冲突，故意或过失致使用户伤亡，导致被侵权赔偿或追究刑事责任的；（3）门店发型师使用的任何美发产品或工具，损害了用户的头发、头皮或其身体的其他部位而发生索赔或其他侵权纠纷的；（4）门店发型师或其他第三方提供服务过程中，损坏或者盗窃用户财物，导致发生侵权赔偿或被追究刑事责任的；（5）发型师或其他第三方与用户因提供服务而发生的其他纠纷或法律责任等。</string>
+    <string name="agreement_content05">&#8195;&#8195;4、意约平台仅以“现有状况且包含所有可能错误”的形式提供相关的服务、软件或程序及任何支持服务，并仅保证：（1）意约平台所提供的服务能基本符合意约平台正式公布的要求；（2）意约平台所提供的相关服务基本与意约平台正式公布的服务承诺相符；（3）意约平台仅在商业上允许的合理范围内尽力解决意约平台在提供产品和服务过程中所遇到的任何问题。</string>
+    <string name="agreement_content06">&#8195;&#8195;5、意约平台作为网络信息服务提供者平台，不担保意约平台上的信息及服务能完全、充分满足用户的需求。对于用户在使用意约平台的线上服务过程中可能遇到的错误、侮辱、诽谤、不作为、淫秽、色情或亵渎事件，意约平台或/及意约公司或/及关联公司不承担法律责任。</string>
+    <string name="agreement_content07">&#8195;&#8195;6、在适用法律允许的最大范围内，意约平台明确表示不提供任何其他类型的保证，不论是明示的或默示的，包括但不限于适销性、适用性、可靠性、准确性、完整性、无病毒及无错误的任何默示保证和责任。</string>
+    <string name="agreement_content08">&#8195;&#8195;7、意约平台通过意约美发服务APP应用软件平台接入互联网为用户提供服务，除此之外与服务有关的设备(包括但不限于手机及其他与接入互联网有关的装置)及所需的费用(包括但不限于网络接入费、上网设备费、手机流量费)等均应由美发师自行负担。</string>
+    <string name="agreement_content09">&#8195;&#8195;8、意约有权随时审核或删除用户发布/传播的涉嫌违法或违反社会主义精神文明，或者被意约认为不妥当的内容( 包括但不限于文字、语音、图片、视频、图文等)。</string>
+    <string name="agreement_content10">&#8195;&#8195;9、所有通告及其他消息都可通过APP或者所提供的联系方式发送。如平台发送相关消息由于自身原因未接收到消息未及时处理相关订单，则由门店自身解决相关问题。</string>
+    <string name="agreement_content11">&#8195;&#8195;10、门店内服务美发师可分为“入驻美发师”“签约美发师”，“入驻美发师”即通过意约APP注册加入门店或被邀请进入门店的美发师，双方需遵守条款为顾客提供服务;“签约美发师”由门店自行管理、运营，如产生任何纠纷与意约平台无关，意约平台不承担责任。</string>
+    <string name="title_activity_order_details">OrderDetailsActivity</string>
+
+    <!-- 订单 -->
+    <string name="order_project">服务项目：</string>
+    <string name="order_store">服务门店：</string>
+    <string name="order_stylist">服务美发师：</string>
+    <string name="order_date">服务时间：</string>
+    <string name="order_date_start">开始时间：</string>
+    <string name="order_date_stop">完成时间：</string>
+    <string name="order_date_cancel">取消时间：</string>
+    <string name="order_date_refund">退款时间：</string>
+    <string name="order_estimate_income">预计收入：</string>
+    <string name="order_amount_refund">退回金额：</string>
+    <string name="order_refund_scale">(项目价格*%s)</string>
+    <string name="order_date_reservation">预约时间：</string>
+    <string name="order_id">订单编号：</string>
+    <string name="order_price">项目价格：</string>
+    <string name="order_apply_reason">申请原因：</string>
+    <string name="order_current_apply">当前申请：</string>
+    <string name="order_price_add">服务加价：</string>
+    <string name="order_price_add_reason">加价原因：</string>
+    <string name="order_price_total">服务总计：</string>
+    <string name="order_handling_fee">手&#160;&#160;续&#160;&#160;费：</string>
+    <string name="order_see_details">查看详情</string>
+    <string name="order_see_details2">查看详情></string>
+    <string name="order_service_project">服务项目</string>
+    <string name="order_service_bundle">TA的套餐</string>
+
+    <!-- 评价comment -->
+    <string name="comment_invite">邀请评价</string>
+    <string name="comment_score">综合评分</string>
+    <string name="comment_score_skill">专业技能 %s</string>
+    <string name="comment_score_service">服务态度 %s</string>
+    <string name="comment_score_experience">洗发体验 %s</string>
+    <string name="comment_grade_high">高于平均水平</string>
+    <string name="comment_look_all">查看全部评价(%s)</string>
+
+    <!-- 个人中心 -->
+    <string name="user_center">个人中心</string>
+    <string name="mine_settings">设置</string>
+    <string name="mine_wallet">我的钱包</string>
+    <string name="mine_coupon">我的优惠券</string>
+    <string name="mine_collect">我的收藏</string>
+    <string name="mine_footprint">我的足迹</string>
+    <string name="mine_recommend">推荐用户</string>
+
+    <!--设置-->
+    <string name="message_alerts">新消息通知</string>
+    <string name="account_security_management">账号安全管理</string>
+    <string name="account_security">账号安全</string>
+    <string name="about">关于意约</string>
+    <string name="experience_feedback">体验反馈</string>
+    <string name="share">分享</string>
+    <string name="clean_cache">清理缓存</string>
+    <string name="exit_account">退出当前账号</string>
+    <string name="modify_phone">修改手机号</string>
+    <string name="modify_password">修改密码</string>
+    <string name="binding_wx">绑定微信号</string>
+    <string name="binding_bank">提现账户管理</string>
+    <string name="binding_zfb">支付密码</string>
+    <string name="version_hint1">当前已经是最新版本,无需更新</string>
+    <string name="version_hint2">已检测到最新版本V</string>
+    <string name="version_hint3">,&#8195;是否</string>
+    <string name="version_hint4">立即更新</string>
+    <string name="name">意约</string>
+    <string name="about_text1">&#8195;&#8195;意约APP借助移动互联网技术以及地理位置服务，直接连接用户和美发师，帮助用户在线预约心仪的美发师。</string>
+    <string name="about_text2">&#8195;&#8195;用户可以在线查看美发师的个人介绍、作品和评价，完成预约和下单，然后到意约合作的门店享受全程无推销、不办卡的优质消费体验。</string>
+    <string name="about_text3">&#8195;&#8195;平台致力于让美发师回归技术和服务，打造行业美好形象。</string>
+    <string name="copyright">Powered by YIYUE! Copyright© 2014-2024</string>
+    <string name="feedback_hint">感谢您对意约的支持,期待您的建议与意见!</string>
+    <string name="Customer_service">客服热线:</string>
+    <string name="service_phone">400-666-8888</string>
+
+    <!-- 钱包 -->
+    <string name="wallet_balance">余额钱包</string>
+    <string name="balance">余额</string>
+    <string name="able_balance">可用余额</string>
+    <string name="enable_balance">不可用余额</string>
+    <string name="wallet_currency">%s钱包</string>
+    <string name="currency">代币</string>
+    <string name="address">地址</string>
+    <string name="currency_price">当前%s总价值%s</string>
+    <string name="balance_price">当前可用余额</string>
+    <string name="project_income">收入项目</string>
+    <string name="wallet_recharge">充值</string>
+    <string name="wallet_withdraw">提现</string>
+    <string name="wallet_cochain">上链</string>
+    <string name="wallet_transfer">转赠</string>
+    <string name="wallet_binding_hint">说明：外部钱包地址一经绑定，不可修改</string>
+    <string name="wallet_address">外部钱包地址：</string>
+    <string name="wallet_address_hint">暂未开放,敬请期待!</string>
+    <string name="wallet_amount_recharge">充值金额</string>
+    <string name="wallet_amount_recharge_max">充值金额最高2000</string>
+    <string name="wallet_cash_withdraw_amount">可用余额：</string>
+    <string name="wallet_withdraw_account">提现账户</string>
+    <string name="wallet_withdraw_amount">提现金额</string>
+    <string name="wallet_withdraw_amount_input">输入提现金额</string>
+    <string name="wallet_handling_fee">手续费(%s\%)：</string>
+    <string name="wallet_received_amount">到账金额：</string>
+    <string name="cochain_currency_number_own">当前拥有%s数：</string>
+    <string name="cochain_currency_number">%s数量</string>
+    <string name="cochain_currency_number_input">输入上链的%s数量</string>
+    <string name="transfer_currency_price">%s参考价：</string>
+    <string name="transfer_currency_unit">元/个</string>
+    <string name="transfer_object">转赠对象</string>
+    <string name="transfer_number">转赠数量</string>
+    <string name="transfer_number_input">输入转赠的%s数量</string>
+    <string name="zfb_name">请输入姓名</string>
+    <string name="zfb_payid">请输入支付宝账号</string>
+    <string name="register_gold">您距离5000元注册奖金还差:</string>
+    <string name="register_gold3">(20万)</string>
+    <string name="order_results">订单业绩</string>
+    <string name="order_mark">注:  您需满足订单业绩达到20万元即可获得</string>
+    <string name="overview">概览</string>
+    <string name="red_packet">红包</string>
+    <string name="default_deductions">违约扣款</string>
+    <string name="withdraw_number">累计提现%s笔</string>
+    <string name="money_total">总额 </string>
+    <string name="order_complete">已完成</string>
+    <string name="order_settlement">已结算</string>
+    <string name="bill_month">%s月实时订单 </string>
+    <string name="withdrawal_month">%s月提现 </string>
+    <string name="bind_bankcard_tip">绑定银行卡姓名与持卡人姓名，必须一致否则可能导致提现被驳回。
+        \n默认获取认证时的真实姓名作为持卡人姓名。如真实姓名与持卡人姓名不一致时，
+        修改需联系客服进行修改。(客服热线：0755-81707080)</string>
+
+    <!--审核-->
+    <string name="the_audit">审核中</string>
+    <string name="the_audit_hint">审核时间需要1~3个工作日,审核期间不能接受订单,</string>
+    <string name="the_audit_hint2">先去完善门店资料吧!</string>
+    <string name="perfect_stores">完善门店</string>
+    <string name="audit_succeed">审核通过</string>
+    <string name="audit_succeed_hint">恭喜,您的申请已经通过,快去邀请美发师加入吧!</string>
+    <string name="audit_failure">审核失败</string>
+    <string name="audit_failure_hint">抱歉,您的门店申请没有通过,请重新提交申请!</string>
+    <string name="again_apply_for">重新申请</string>
+    <string name="basic_information">基本信息</string>
+    <string name="stores_name">门店名称</string>
+    <string name="stores_name_hint">请输入门店名称</string>
+    <string name="service_setting">服务设置</string>
+    <string name="stores_business_time">门店营业时间</string>
+    <string name="select_business_cycle">选择营业周期</string>
+    <string name="stores_station_num">门店工位数量</string>
+    <string name="station_num">请输入工位数量</string>
+    <string name="service_facilities">可提供服务的美发设施</string>
+    <string name="service_facilities1">洗剪吹</string>
+    <string name="service_facilities2">洗护</string>
+    <string name="service_facilities3">烫发</string>
+    <string name="service_facilities4">染发</string>
+    <string name="service_facilities5">护理</string>
+    <string name="service_facilities6">洗色</string>
+    <string name="service_facilities7">拉直</string>
+    <string name="service_facilities8">接发</string>
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+
+    <string name="payment">支付</string>
+    <string name="payment_wechat">微信支付</string>
+    <string name="alipay">支付宝</string>
+    <string name="bankpay">银行卡</string>
+    <string name="recharge_balance">余额充值</string>
+    <string name="payment_method_select">请选择支付方式</string>
+
+    <!--推荐用户-->
+    <string name="my_referral_code">我的推荐码</string>
+    <string name="referral_user">推荐人</string>
+    <string name="no_user">您暂无推荐人，可进行绑定</string>
+    <string name="referral_hint">推荐用户参与消费可获得丰富%s奖励</string>
+    <string name="referral_record">推荐记录(%d人)</string>
+    <string name="share_referral_code">邀请用户</string>
+    <string name="selected_reward_type">选择奖励类型</string>
+    <string name="selected_reward_currency">代币</string>
+    <string name="selected_reward_RMB">人民币</string>
+    <string name="selected_reward_info">&#8195;&#8195;选择相应奖励类型后，即可获得相应推荐奖励，确定后30天可再次更改</string>
+    <string name="referral_description">推荐说明</string>
+    <string name="referral_description1">&#8195;&#8195;1.被邀请人必须使用邀请人的邀请链接（注意必须是完整的邀请链接）或填写邀请码注册。</string>
+    <string name="referral_description2">&#8195;&#8195;2.奖励类型，系统默认奖励为意约%s奖励，可自由选择为余额钱包或%s奖励。</string>
+    <string name="referral_description3">&#8195;&#8195;3奖励%s可上链到外部数字货币交易所钱包，可转增给平台用户好友；奖励余额可用于平台消费或提现至支付宝，微信钱包。</string>
+    <string name="referral_description4">&#8195;&#8195;4.邀请奖励在每笔订单完成后返还给邀请人。</string>
+    <string name="referral_description5">&#8195;&#8195;5.邀请人享受的好友奖励永久有效</string>
+    <string name="referral_description6">&#8195;&#8195;6.本计划自2018年11月正式开始，具体开始及结束时间以官方公告为准</string>
+
+    <!--个人资料-->
+    <string name="person_data">个人资料</string>
+    <string name="head_photo">头像</string>
+    <string name="stores">门店名</string>
+    <string name="location">地址</string>
+    <string name="address_select">选择地区</string>
+    <string name="station">工位</string>
+    <string name="environment_photo">环境照</string>
+    <string name="cover_photo">封面照</string>
+    <string name="service_scope">服务范围</string>
+
+    <!-- 美发师 -->
+    <string name="stylist_order_service">待核销订单：</string>
+    <string name="stylist_order_price_amount">累计完成业绩：</string>
+    <string name="stylist_join_num">平台美发师(%s)</string>
+    <string name="stylist_signing_num">店内美发师(%s)</string>
+    <string name="stylist_join">平台美发师</string>
+    <string name="stylist_signing">店内美发师</string>
+    <string name="stylist_dismissal">解约</string>
+    <string name="stylist_comment">顾客评价</string>
+    <string name="stylist_works">Ta的作品</string>
+    <string name="stylist_receipt_count">(月接单/%s)</string>
+    <string name="my_stylist">我的美发师</string>
+
+    <string name="stylist_agree">同意</string>
+    <string name="stylist_refuse">拒绝</string>
+
+    <string name="stylist_had_agree">已同意</string>
+    <string name="stylist_had_refuse">已拒绝</string>
+
+    <!-- 门店 -->
+    <string name="store_address">地址：</string>
+    <string name="store_service_type">服务类别：</string>
+    <string name="store_address_edit">前往编辑</string>
+    <string name="store_look_more">看更更多</string>
+    <string name="store_service_scope">门店服务范围</string>
+    <string name="store_orders">门店订单</string>
+
+    <!-- 时间弹框 -->
+    <string name="time_dialog_ok">确认</string>
+
+    <!--时间管理-->
+    <string name="store_join">加入门店</string>
+    <string name="time_manage">时间管理</string>
+    <string name="order_time">营业时间</string>
+    <string name="order_cycle">营业周期</string>
+    <string name="business_switch">营业开关</string>
+
+    <!--评价管理-->
+    <string name="evaluation_manager">评价管理</string>
+    <string name="evaluation_num">(0)</string>
+    <string name="comprehensive_evaluation">综合评分</string>
+    <string name="environment_grade">环境评分 %s</string>
+    <string name="service_attitude">服务态度 %s</string>
+    <string name="relative_ratio_equal">等于平均水平</string>
+
+    <!-- 作品 -->
+    <string name="works_many">作品集</string>
+
+    <!--账户安全-->
+    <string name="phone_verify">手机验证</string>
+    <string name="password_verify">密码验证</string>
+    <string name="password_verify_hint">请输入您使用的密码进行验证</string>
+    <string name="no_phone_num">原号码无法使用?</string>
+    <string name="input_old_password">请输入旧密码</string>
+    <string name="password2">密码:</string>
+    <string name="update_phone">更换手机号</string>
+    <string name="update_phone_hint">更换号码后, 下次登录请使用新的号码登录</string>
+    <string name="current_phone">当前手机号:</string>
+    <string name="complete">完 成</string>
+
+    <!--个人资料-->
+    <string name="update_environment">修改环境图</string>
+    <string name="environment_show_photo">环境展示图</string>
+    <string name="environment_hint">(至少1张, 最多8张)</string>
+    <string name="update_service">修改服务范围</string>
+    <string name="phone_photos">手机相册</string>
+    <string name="camera">相机</string>
+    <string name="station_number">%s位</string>
+
+    <!--钱包-->
+    <string name="wallet_description">钱包说明</string>
+    <string name="wallet_description2">&#8195;&#8195;关于钱包金额：钱包金额分为钱包总金额及可提现金额每笔收入需待订单核销后才可进入钱包余额中，每笔收入需经过冻结期7天后才可提现。没过冻结期余额不可提现。</string>
+    <string name="wallet_description3">&#8195;&#8195;关于注册时领取的5000元钱包余额锁定在不可提现里面，提现条件满足以下条件：（1）单个门店总订单金额达到20万。5000元现金就记入“可提现金额”。</string>
+    <string name="wallet_description4">&#8195;&#8195;关于提现：提现每笔收取1.00元手续费，到账时间为3个工作日</string>
+
+    <!--订单统计-->
+    <string name="order_statistics">订单统计</string>
+    <string name="pending_order">待核销订单</string>
+    <string name="order_number">%s单</string>
+    <string name="total_order">总订单</string>
+    <string name="total_income">总收入</string>
+    <string name="total_spending">总支出</string>
+    <string name="RMB">¥%s</string>
+    <string name="RMB2">¥&#160;%s</string>
+    <string name="total_performance">总业绩</string>
+    <string name="time">时间</string>
+    <string name="complete_order">完成订单</string>
+    <string name="performance">业绩</string>
+    <string name="income">收入</string>
+    <string name="spending">支出</string>
+    <string name="orders">(共%s笔)</string>
+    <string name="stores_total">门店总计</string>
+    <string name="score">积分</string>
+    <string-array name="spingarr">
+        <item>全部</item>
+        <item>平台美发师</item>
+        <item>店内美发师</item>
+    </string-array>
+    <string name="order_detil">订单明细</string>
+    <string name="order_service_income">服务收入</string>
+    <!--修改地址-->
+    <string name="update_location">修改地址</string>
+    <string name="detailed_location">详细地址</string>
+    <string name="location_hint3">请选择区</string>
+    <string name="location_hint4">请输入详细地址</string>
+
+    <!--邀请美发师-->
+    <string name="synthesis_sort">综合排序</string>
+    <string name="reset">重置</string>
+
+    <!--地址-->
+    <string name="select_area">选择地区</string>
+    <string name="detailed_address">详细地址</string>
+    <string name="detailed_address_hint">请输入详细地址</string>
+    <string name="banding_referees">绑定推荐人</string>
+    <string name="search_address">搜索地址</string>
+
+    <!--支付-->
+    <string name="pay_error_wechat_noclient">请先安装微信客户端</string>
+
+    <!-- 作品详情-->
+    <string name="opus_page">%1$d/%2$d</string>
+
+    <!-- 分享-->
+    <string name="dialog_share_title">分享到</string>
+    <string name="dialog_share_wechat">微信好友</string>
+    <string name="dialog_share_wechatmemoent">朋友圈</string>
+    <string name="dialog_share_qq">QQ好友</string>
+    <string name="dialog_share_friend">发友</string>
+    <string name="dialog_share_qrcode">二维码</string>
+    <string name="dialog_share_title_appset">我发现一个超赞的APP，快来试试吧！</string><!--设置-分享APP-意约logo-->
+    <string name="dialog_share_title_appcode">这是我的意约专属推荐码：%s</string><!--推荐码-推荐人的头像-->
+    <string name="dialog_share_title_apprecommend">我是您的意约专属门店，快来试试吧！</string><!--门店自我推荐-门店头像-->
+    <string name="dialog_share_title_apprecard">我的意约专属门店超赞，你也来试试吧！</string><!--门店名片-门店头像-->
+    <string name="dialog_share_title_appworks">美发师%s的新作品，超赞的，你也来看看吧！</string><!--美发师详情-美发师头像-->
+    <string name="dialog_share_title_appteacher">我的意约专属美发师超赞，你也来试试吧！</string><!--美发师名片-美发师头像-->
+
+    <string name="dialog_share_content">互联网美发预约平台意约，全程无推销,不办卡的优质消费体验，在线预约明星御用美发师，无需排位等座</string><!--分享内容-->
+
+
+    <!--推荐好友-->
+    <string name="invite_join">邀请加入</string>
+    <string name="invite_join_plat">邀请平台美发师入驻</string>
+    <string name="invite_join_store">邀请成为店内美发师</string>
+    <string name="invite_hint">邀请须知</string>
+    <string name="invite_hint1">•【平台美发师】 可以入驻多家门店（不限制入驻门店数量和地理位置），入驻申请发出后门店通过申请即可入驻成功，完成订单后获得相应的佣金；</string>
+    <string name="invite_hint2">•【店内美发师】 门店的全职美发师，由门店发放相应的佣金，每个美发师只能入驻一家门店，入住后不可再申请加入其它门店，只有与入驻门店解约后恢复申请入驻权限；</string>
+    <string name="mall_hint">&#8195;为你寻觅世间好物，工厂直达门店，剔除品牌溢价和中间商赚差价，意约商城为美发店提供专业的工具和耗材，以更低的价格享受更优质的产品。\n&#8195;业界首创的“新服务+新电商”的模式，将美业天然的全民刚需流量，通过意约商城，转化为流量红利，入驻平台门店无需销售即可共享意约商城利润，让传统美业门店的零售业务，无中生有、百倍放大。\n&#8195;以严谨的态度，为美发门店甄选优品！</string>
+
+    <!--订单统计-->
+    <string name="order_user_name">用户名：%s</string>
+    <string name="order_service_name">项目名称：%s</string>
+    <string name="order_today">今日</string>
+    <string name="order_yesterday">昨日</string>
+    <string name="order_recent7">近7日</string>
+    <string name="order_recent30">近30日</string>
+
+
+</resources>

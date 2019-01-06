@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_3"
+        tools:text="2018.11.17" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/ic_user"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/im_avatar" />
+
+        <LinearLayout
+            android:id="@+id/layout_send_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toLeftOf="@+id/ic_user"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_6"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_6">
+
+            <TextView
+                android:id="@+id/chat_tv_location"
+                style="@style/chat_content_date_style"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/im_location_msg"
+                android:gravity="center|left"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

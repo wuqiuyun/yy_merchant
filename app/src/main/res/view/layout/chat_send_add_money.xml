@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_3"
+        tools:text="2018.11.17" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/ic_user"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/im_avatar" />
+
+        <LinearLayout
+            android:id="@+id/layout_addmoney_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toLeftOf="@+id/ic_user"
+            android:background="@drawable/right_chat"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp_6"
+                android:paddingTop="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                tools:text="您选择加入其它服务，类型：null，价格：0.0，请您同意加价" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_chat_add_money_status"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:paddingTop="@dimen/dp_4"
+                    android:text="@string/Refused"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_8">
+
+                    <TextView
+                        android:id="@+id/tv_am_check_detail"
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_chat_add_money_detail"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_4"
+                        android:text="@string/order_see_details"
+                        android:textColor="@color/text_color6"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--全屏主题-->
+    <style name="FullScreen.AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--activity START-->
+    <!--启动页 背景主题 冷启动 减少白屏-->
+    <style name="Splash.FullScreen.AppTheme" parent="FullScreen.AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@drawable/bg_launch</item>
+    </style>
+
+    <style name="BottomToTopAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottomview_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottomview_anim_exit</item>
+    </style>
+
+    <style name="BottomViewTheme_Default">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--默认EditText 样式-->
+    <style name="EditTextDefultStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColorHint">#999999</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--按钮点击效果1-->
+    <style name="RippleBtnTheme">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!--Popwindow动画-->
+    <style name="AnimImPopwindow">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!--时间弹窗效果-->
+    <style name="TimePickerDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/color_white</item>
+    </style>
+
+    <!--自定义时间选择动画-->
+
+    <!--Easydialog 样式-->
+    <style name="EasyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--Easydialog 默认动画-->
+    <style name="DialogDefaultAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/exit_anim</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="popup_dialog" parent="@android:style/Theme.Dialog">
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+    <style name="chat_text_date_style">
+        <item name="android:padding">@dimen/dp_2</item>
+        <item name="android:paddingTop">@dimen/dp_2</item>
+        <item name="android:paddingBottom">@dimen/dp_2</item>
+        <item name="android:paddingLeft">@dimen/dp_12</item>
+        <item name="android:paddingRight">@dimen/dp_12</item>
+        <item name="android:textColor">#c0c0c0</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:background">@drawable/im_chat_timestampe_bg</item>
+    </style>
+</resources>

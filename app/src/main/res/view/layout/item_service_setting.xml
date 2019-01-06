@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/cb_label"
+        android:layout_width="@dimen/dp_66"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/text_bg_selector"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/service_facilities1"
+        android:textColor="@drawable/text_selector"
+        android:textSize="@dimen/sp_14" />
+</layout>

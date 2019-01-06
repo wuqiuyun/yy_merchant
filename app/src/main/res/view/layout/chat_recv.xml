@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_3"
+        tools:text="2018.11.17" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.yl.core.widget.CircleImageView
+            android:id="@+id/ic_user"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:src="@drawable/im_avatar" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_50"
+            android:background="@drawable/left_chat"
+            android:gravity="left"
+            android:paddingBottom="@dimen/dp_6"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+            android:textColor="@color/color_333333"
+            tools:text="DSADSADASDSDASDSADASDASDASDASDASD" />
+    </LinearLayout>
+</LinearLayout>

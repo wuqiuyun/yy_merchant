@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_76"
+        android:layout_height="@dimen/dp_76">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:padding="@dimen/dp_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/meiz" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/delete" />
+
+    </RelativeLayout>
+</layout>

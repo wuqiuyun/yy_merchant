@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_190">
+
+            <com.yiyue.store.widget.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_bg"
+                android:visibility="gone" />
+
+            <!--审核中-->
+            <LinearLayout
+                android:id="@+id/ll_the_audit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#60000000"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:gravity="center_horizontal"
+                    android:text="@string/the_audit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center_horizontal"
+                    android:text="@string/the_audit_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:gravity="center_horizontal"
+                    android:text="@string/the_audit_hint2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_perfect_stores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/shape_text_bg3"
+                    android:onClick="@{click.onClick}"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_3"
+                    android:text="@string/perfect_stores"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <!--审核失败-->
+            <LinearLayout
+                android:id="@+id/ll_audit_failure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#60000000"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:gravity="center_horizontal"
+                    android:text="@string/audit_failure"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center_horizontal"
+                    android:text="@string/audit_failure_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <TextView
+                    android:id="@+id/tv_again_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:background="@drawable/shape_text_bg3"
+                    android:onClick="@{click.onClick}"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_3"
+                    android:text="@string/again_apply_for"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <!--审核通过-->
+            <LinearLayout
+                android:id="@+id/ll_audit_succeed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#60000000"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:gravity="center_horizontal"
+                    android:text="@string/audit_succeed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center_horizontal"
+                    android:text="@string/audit_succeed_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <TextView
+                    android:id="@+id/tv_ok"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:background="@drawable/shape_text_bg3"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{click.onClick}"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_3"
+                    android:text="@string/time_dialog_ok"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_order_confirm"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:label_title="@string/label_title_confirm" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_21"
+                android:layout_gravity="center_vertical"
+                android:background="@color/dark_gray" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_order_service"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:label_title="@string/label_title_service" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_21"
+                android:layout_gravity="center_vertical"
+                android:background="@color/dark_gray" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_order_complete"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:label_title="@string/label_title_complete" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_21"
+                android:layout_gravity="center_vertical"
+                android:background="@color/dark_gray" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_order_refund"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:label_title="@string/label_title_refund" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_EFEFEF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_mine_stylist"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:icon="@drawable/icon_home_01"
+                app:label_color="@color/color_343434"
+                app:label_title="@string/label_mine_stylist" />
+
+            <View
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_EFEFEF" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_store_manager"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:icon="@drawable/icon_home_02"
+                app:label_color="@color/color_343434"
+                app:label_title="@string/label_store_manager" />
+
+            <View
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_EFEFEF" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_time_manager"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:icon="@drawable/icon_home_03"
+                app:label_color="@color/color_343434"
+                app:label_title="@string/label_time_manager" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_EFEFEF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_stylist_invite"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:icon="@drawable/icon_home_04"
+                app:label_color="@color/color_343434"
+                app:label_title="@string/home_stylist_invite" />
+
+            <View
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_EFEFEF" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_comment_manager"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:icon="@drawable/icon_home_05"
+                app:label_color="@color/color_343434"
+                app:label_title="@string/label_comment_manager" />
+
+            <View
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_EFEFEF" />
+
+            <com.yiyue.store.module.home.HomeButtonView
+                android:id="@+id/btn_order_statistics"
+                style="@style/RippleBtnTheme"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{click.onClick}"
+                app:icon="@drawable/icon_home_06"
+                app:label_color="@color/color_343434"
+                app:label_title="@string/home_order_manager" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_EFEFEF" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isHome="false"
+            app:title_text="@string/gi_aply_join"></com.yiyue.store.widget.TitleView>
+
+        <RelativeLayout
+            android:id="@+id/jg_layout_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.yl.core.widget.CircleImageView
+                android:id="@+id/jg_iv_photo"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/im_avatar" />
+
+            <TextView
+                android:id="@+id/jg_tv_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jg_iv_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColor="@color/color_333333"
+                android:text="艾米" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jg_tv_group_name"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:text="群ID：" />
+
+                <TextView
+                    android:id="@+id/jg_tv_groupid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:text="1234567" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+
+            <TextView
+                android:id="@+id/af_tv_tablename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text="@string/ag_apply_msg"
+                android:textColor="@color/color_333333" />
+
+            <com.yiyue.store.widget.LineEditText
+                android:id="@+id/af_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ag_apply_msg_hint"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginLeft="@dimen/dp_10"
+                app:have_line="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gi_tv_apply_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/shape_btn_bg"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="@string/ag_apply_send"
+            android:textColor="@color/alpha_95_white"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</layout>

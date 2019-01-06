@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bill_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_colour"
+                android:padding="@dimen/dp_10"
+                android:text="@string/bill_month"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_10">
+
+                <LinearLayout
+                    android:id="@+id/ll_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_income"
+                        android:textColor="@color/color_343434" />
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginRight="@dimen/dp_3"
+                            android:gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="¥"
+                            android:textColor="@color/color_343434"/>
+                        <TextView
+                            android:id="@+id/tv_total_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/color_343434"
+                            android:textSize="@dimen/sp_17"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/login_bg"
+                    android:paddingBottom="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_20" />
+
+                <LinearLayout
+                    android:id="@+id/ll_expend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_spending"
+                        android:textColor="@color/color_343434" />
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginRight="@dimen/dp_3"
+                            android:gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="¥"
+                            android:textColor="@color/color_343434"/>
+                        <TextView
+                            android:id="@+id/tv_total_spending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/color_343434"
+                            android:textSize="@dimen/sp_17"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </LinearLayout>
+            </TableRow>
+
+            <LinearLayout
+                android:layout_margin="@dimen/dp_15"
+                android:background="@drawable/background_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_15">
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:id="@+id/ll_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_type_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_service_income"
+                        android:textColor="@color/color_343434" />
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginRight="@dimen/dp_3"
+                            android:gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="¥"
+                            android:textColor="@color/color_343434"/>
+                        <TextView
+                            android:id="@+id/tv_service_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="@dimen/dp_100"
+                            android:text="0.00"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:textColor="@color/color_343434"
+                            android:textSize="@dimen/sp_17"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </LinearLayout>
+                <com.yiyue.store.widget.piechart.PieChart
+                    android:layout_weight="1"
+                    android:layout_toRightOf="@+id/ll_type_name"
+                    android:id="@+id/pieChart"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_150"
+                    android:layout_centerInParent="true"/>
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_bill_detils"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/order_see_details2"
+                    android:textColor="@color/color_FF8C40" />
+            </TableRow>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

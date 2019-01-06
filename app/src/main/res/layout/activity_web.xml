@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yiyue.store.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="@string/wallet_description" />
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:progressDrawable="@drawable/shape_progress_web" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/alpha_95_white">
+            <LinearLayout
+                android:id="@+id/ll_dwebview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <com.yiyue.store.widget.webview.DWebView
+                android:id="@+id/wv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_signedagree"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:background="@drawable/shape_agreement_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160"/>
+
+            <Button
+                android:layout_height="@dimen/dp_47"
+                android:id="@+id/btn_agree"
+                android:layout_width="match_parent"
+                android:background="@color/login_text_bg"
+                android:onClick="@{click.onClick}"
+                android:text="@string/agree_agreement"
+                android:textColor="@color/alpha_95_white"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    </LinearLayout>
+</layout>

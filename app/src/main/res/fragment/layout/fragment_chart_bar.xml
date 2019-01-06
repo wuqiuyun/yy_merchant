@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.yiyue.store.component.databind.ClickHandler"/>
+        <variable
+            name="click"
+            type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_left_button"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_slide_left_nor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{click.onClick}"
+            />
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_right_button"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_slide_right_nor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{click.onClick}"
+            />
+    </LinearLayout>
+</layout>

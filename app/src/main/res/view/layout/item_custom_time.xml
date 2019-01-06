@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_dialog_time_day"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:text="@string/monday"
+            android:textColor="@color/alpha_80_black"/>
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dialog_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:gravity="center"
+                android:text="10:00-23:00"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_14"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:src="@drawable/icon_arrow_right"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_15"
+        android:background="@color/color_B0B0B0"
+        />
+
+</LinearLayout>

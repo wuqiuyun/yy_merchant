@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/iv_works"
+        android:src="@drawable/meizi"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"/>
+</layout>

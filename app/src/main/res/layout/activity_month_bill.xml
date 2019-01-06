@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.yiyue.store.component.databind.ClickHandler" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+    </data>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/login_bg"
+        android:layout_height="match_parent">
+        <!-- 标题 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            <TextView
+                android:id="@+id/btn_left"
+                style="@style/RippleBtnTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:drawableLeft="@drawable/icon_arrow_back"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/back"
+                android:onClick="@{click.onClick}"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/sp_14" />
+            <TextView
+                android:onClick="@{click.onClick}"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018年12月"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/icon_down"
+                android:textSize="@dimen/sp_18" />
+        </RelativeLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/table_layout"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@color/transparent"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/color_FFA200"
+            android:layout_height="@dimen/dp_50"/>
+        <com.yiyue.store.widget.viewpage.CustomViewPager
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/view_page"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
+
